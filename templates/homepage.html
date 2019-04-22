@@ -4,168 +4,114 @@
     {{ super() }}
 {% endblock %}
 
+{% block script_head %}
+
+{% endblock %}
+
 {% block content %}
 <!-- Navigation -->
-{% include "navigation.html" %}
-
-<!-- Masthead -->
-<header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
-            </div>
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form>
-                    <div class="form-row">
-                        <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+<!-- {% include "navigation.html" %} -->
+    <div class="home-section">
+    <div id="topScroll">&nbsp;</div>
+	<h1 style="color:#0000FF; text-align:center "><b>WEB SO SÁNH</b></h1>
+    <div class="logo"><img src="{{ url_for('static', filename='img/sosanh.png') }}"/></div>
+    <div class="block-search-wrap">
+	<div class="block-search">
+	    <form name="searchForm" id="searchForm" method="POST" action="https://www.sore.vn/submitSuggestion" onSubmit="return submitSearch();">
+		<input type="search" name="txt_Keyword" value="" id="txt_Keyword" maxlength="256" dir="auto" placeholder="Bạn cần mua gì?" autocomplete="off" />
+		<input type="hidden" id="h_suggest_id" name="h_suggest_id" value="">
+		<input type="hidden" id="h_suggest_type" name="h_suggest_type" value="">
+		<input type="hidden" id="h_suggest_url" name="h_suggest_url" value="">
+		<input type="hidden" name="isPost" value="1">
+		<input type="hidden" name="currentURL" value="https://www.sore.vn/index.php">
+		<button type="submit" id="searchSubmit"><svg class="icon icon-search2"><use xlink:href="#icon-search2"></use></svg></button>
+	    </form>
+	</div>
     </div>
-</header>
 
-<!-- Icons Grid -->
-<section class="features-icons bg-light text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-screen-desktop m-auto text-primary"></i>
-                    </div>
-                    <h3>Fully Responsive</h3>
-                    <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-layers m-auto text-primary"></i>
-                    </div>
-                    <h3>Bootstrap 4 Ready</h3>
-                    <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                    <div class="features-icons-icon d-flex">
-                        <i class="icon-check m-auto text-primary"></i>
-                    </div>
-                    <h3>Easy to Use</h3>
-                    <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                </div>
-            </div>
-        </div>
+    <div class="block-slide-txt">
+	<div class="slide-txt" id="slide-txt">
+	    <div class="txt"><p><b>sosanh.ga</b> liên tục cập nhật giá cả, sản phẩm mới</p></div>
+	    <div class="txt"><p><b>sosanh.vn</b> giúp bạn so sánh các sản phẩm khác nhau</p></div>
+	    <div class="txt"><p><h1>so sánh giá rẻ nhất và tìm giá rẻ nhất tại <b>sosanh.vn</b></h1></p></div>
+	    <div class="txt"><p><b>sosanh.vn</b> cung cấp cho bạn thông tin đa chiều về sản phẩm</p></div>
+	</div>
     </div>
-</section>
-
-<!-- Image Showcases -->
-<section class="showcase">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-
-            <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                style="background-image: url({{ url_for('static', filename='img/bg-showcase-1.jpg') }});"></div>
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Fully Responsive Design</h2>
-                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look
-                    great
-                    on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-lg-6 text-white showcase-img"
-                style="background-image: url({{ url_for('static', filename='img/bg-showcase-2.jpg') }});"></div>
-            <div class="col-lg-6 my-auto showcase-text">
-                <h2>Updated For Bootstrap 4</h2>
-                <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way
-                    in
-                    mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!
-                </p>
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                style="background-image: url({{ url_for('static', filename='img/bg-showcase-3.jpg') }});"></div>
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Easy to Use &amp; Customize</h2>
-                <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some
-                    deeper
-                    customization options. Out of the box, just add your content and images, and your new landing page
-                    will be
-                    ready to go!</p>
-            </div>
-        </div>
+    <div class="block-padding"></div>
+    <div class="block-ralative">
+	<div class="suggestion_keywords"> <div class='tl'>Có thể bạn quan tâm:</div><a href="">tủ lạnh</a><a href="">Xe đạp</a><a href="">Máy in HP</a><a href="">Máy sấy</a><a href="">ô tô</a><a href="">Cân điện tử</a><a href="">Vòng cổ Elizabeth</a><a href="">mặt nạ</a><a href="">Quần jean nữ</a><a href="">Dán cường lực</a> </div>
     </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials text-center bg-light">
-    <div class="container">
-        <h2 class="mb-5">What people are saying...</h2>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3"
-                        src="{{ url_for('static', filename='img/testimonials-1.jpg') }}" alt="">
-                    <h5>Margaret E.</h5>
-                    <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3"
-                        src="{{ url_for('static', filename='img/testimonials-2.jpg') }}" alt="">
-                    <h5>Fred S.</h5>
-                    <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super
-                        nice
-                        landing pages."</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-circle mb-3"
-                        src="{{ url_for('static', filename='img/testimonials-3.jpg') }}" alt="">
-                    <h5>Sarah W.</h5>
-                    <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="block-bg-bot">
+	<div class="block-category">
+	    <div class="title show">
+		<svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg>
+		<h2><span>So sánh giá theo danh mục</span></h2>
+		<svg class="icon icon-arrow-left2"><use xlink:href="#icon-arrow-left2"></use></svg>
+	    </div>
+	    <div class="cate-content mobile-cate">
+		<ul><li><a href="" title="Điện thoại, Máy tính bảng"><span class='icon-cate dien-thoai-may-tinh-bang'></span>Điện thoại, Máy tính bảng</a>
+		</li><li><a href="" title="Tivi, Video, Âm thanh"><span class='icon-cate tivi-video-am-thanh'></span>Tivi, Video, Âm thanh</a></li>
+		<li><a href="" title="Thiết bị văn phòng"><span class='icon-cate thiet-bi-van-phong'></span>Thiết bị văn phòng</a></li>
+		<li><a href="" title="Máy tính, laptop"><span class='icon-cate may-tinh-laptop'></span>Máy tính, laptop</a></li>
+		<li><a href="" title="Máy ảnh, kỹ thuật số"><span class='icon-cate may-anh-ky-thuat-so'></span>Máy ảnh, kỹ thuật số</a></li>
+		<li><a href="" title="Điện lạnh"><span class='icon-cate dien-lanh'></span>Điện lạnh</a></li>
+		<li><a href="" title="Gia dụng"><span class='icon-cate gia-dung'></span>Gia dụng</a></li>
+		<li><a href="" title="Mẹ và bé"><span class='icon-cate me-va-be'></span>Mẹ và bé</a></li>
+		<li><a href="" title="Thời trang, mỹ phẩm, thể thao"><span class='icon-cate thoi-trang-my-pham-the-thao'></span>Thời trang, mỹ phẩm, thể thao</a></li>
+		<li><a href="" title="Đồ dùng nhà bếp"><span class='icon-cate do-dung-nha-bep'></span>Đồ dùng nhà bếp</a></li>
+		<li><a href="" title="Sức khỏe, y tế"><span class='icon-cate suc-khoe-y-te'></span>Sức khỏe, y tế</a></li>
+		<li><a href="" title="An ninh"><span class='icon-cate an-ninh'></span>An ninh</a></li>
+		<li><a href="" title="Dịch vụ, sửa chữa, bảo trì"><span class='icon-cate dich-vu-sua-chua-bao-tri'></span>Dịch vụ, sửa chữa, bảo trì</a></li>
+		<li><a href="" title="Nội thất, Ngoại thất, VLXD"><span class='icon-cate noi-that-ngoai-that-vlxd'></span>Nội thất, Ngoại thất, VLXD</a></li>
+		<li><a href="" title="Thiết bị điện, điện tử, dụng cụ cơ khí"><span class='icon-cate thiet-bi-dien-dien-tu-dung-cu-co-khi'></span>Thiết bị điện, điện tử, dụng cụ cơ khí</a></li>
+		<li><a href="" title="Ô tô, xe máy, xe đạp"><span class='icon-cate o-to-xe-may-xe-dap'></span>Ô tô, xe máy, xe đạp</a></li>
+		<li><a href="" title="Cây trồng, vật nuôi"><span class='icon-cate cay-trong-vat-nuoi'></span>Cây trồng, vật nuôi</a></li>
+		<li><a href="" title="Sách, tranh, quà tặng"><span class='icon-cate sach-tranh-qua-tang'></span>Sách, tranh, quà tặng</a></li>
+		</ul>	    
+		</div>
+	    <div class="cate-content tablet-cate">
+		<ul><li><a href="" title="Điện thoại, Máy tính bảng"><span class='icon-cate dien-thoai-may-tinh-bang'></span>Điện thoại, Máy tính bảng</a></li>
+		<li><a href="" title="Tivi, Video, Âm thanh"><span class='icon-cate tivi-video-am-thanh'></span>Tivi, Video, Âm thanh</a></li>
+		<li><a href="" title="Thiết bị văn phòng"><span class='icon-cate thiet-bi-van-phong'></span>Thiết bị văn phòng</a></li>
+		<li><a href="" title="Máy tính, laptop"><span class='icon-cate may-tinh-laptop'></span>Máy tính, laptop</a></li>
+		<li><a href="" title="Máy ảnh, kỹ thuật số"><span class='icon-cate may-anh-ky-thuat-so'></span>Máy ảnh, kỹ thuật số</a></li>
+		<li><a href="" title="Điện lạnh"><span class='icon-cate dien-lanh'></span>Điện lạnh</a></li>
+		<li><a href="" title="Gia dụng"><span class='icon-cate gia-dung'></span>Gia dụng</a></li>
+		<li><a href="" title="Mẹ và bé"><span class='icon-cate me-va-be'></span>Mẹ và bé</a></li>
+		<li><a href="" title="Thời trang, mỹ phẩm, thể thao"><span class='icon-cate thoi-trang-my-pham-the-thao'></span>Thời trang, mỹ phẩm, thể thao</a></li>
+		<li><a href="" title="Đồ dùng nhà bếp"><span class='icon-cate do-dung-nha-bep'></span>Đồ dùng nhà bếp</a></li>
+		<li><a href="" title="Sức khỏe, y tế"><span class='icon-cate suc-khoe-y-te'></span>Sức khỏe, y tế</a></li>
+		<li><a href="" title="An ninh"><span class='icon-cate an-ninh'></span>An ninh</a></li>
+		<li><a href="" title="Dịch vụ, sửa chữa, bảo trì"><span class='icon-cate dich-vu-sua-chua-bao-tri'></span>Dịch vụ, sửa chữa, bảo trì</a></li>
+		<li><a href="" title="Nội thất, Ngoại thất, VLXD"><span class='icon-cate noi-that-ngoai-that-vlxd'></span>Nội thất, Ngoại thất, VLXD</a></li>
+		<li><a href="" title="Thiết bị điện, điện tử, dụng cụ cơ khí"><span class='icon-cate thiet-bi-dien-dien-tu-dung-cu-co-khi'></span>Thiết bị điện, điện tử, dụng cụ cơ khí</a></li>
+		<li><a href="" title="Ô tô, xe máy, xe đạp"><span class='icon-cate o-to-xe-may-xe-dap'></span>Ô tô, xe máy, xe đạp</a></li>
+		<li><a href="" title="Cây trồng, vật nuôi"><span class='icon-cate cay-trong-vat-nuoi'></span>Cây trồng, vật nuôi</a></li>
+		<li><a href="" title="Sách, tranh, quà tặng"><span class='icon-cate sach-tranh-qua-tang'></span>Sách, tranh, quà tặng</a></li>
+		</ul>	
+		</div>
+	    <div class="cate-content desktop-cate">
+		<ul><li><a href="" title="Điện thoại, Máy tính bảng"><span class='icon-cate dien-thoai-may-tinh-bang'></span>Điện thoại, Máy tính bảng</a></li>
+		<li><a href="" title="Tivi, Video, Âm thanh"><span class='icon-cate tivi-video-am-thanh'></span>Tivi, Video, Âm thanh</a></li>
+		<li><a href="" title="Thiết bị văn phòng"><span class='icon-cate thiet-bi-van-phong'></span>Thiết bị văn phòng</a></li>
+		<li><a href="" title="Máy tính, laptop"><span class='icon-cate may-tinh-laptop'></span>Máy tính, laptop</a></li>
+		<li><a href="" title="Máy ảnh, kỹ thuật số"><span class='icon-cate may-anh-ky-thuat-so'></span>Máy ảnh, kỹ thuật số</a></li>
+		<li><a href="" title="Điện lạnh"><span class='icon-cate dien-lanh'></span>Điện lạnh</a></li>
+		<li><a href="" title="Gia dụng"><span class='icon-cate gia-dung'></span>Gia dụng</a></li>
+		<li><a href="" title="Mẹ và bé"><span class='icon-cate me-va-be'></span>Mẹ và bé</a></li>
+		<li><a href="" title="Thời trang, mỹ phẩm, thể thao"><span class='icon-cate thoi-trang-my-pham-the-thao'></span>Thời trang, mỹ phẩm, thể thao</a></li>
+		<li><a href="" title="Đồ dùng nhà bếp"><span class='icon-cate do-dung-nha-bep'></span>Đồ dùng nhà bếp</a></li>
+		<li><a href="" title="Sức khỏe, y tế"><span class='icon-cate suc-khoe-y-te'></span>Sức khỏe, y tế</a></li>
+		<li><a href="" title="An ninh"><span class='icon-cate an-ninh'></span>An ninh</a></li>
+		<li><a href="" title="Dịch vụ, sửa chữa, bảo trì"><span class='icon-cate dich-vu-sua-chua-bao-tri'></span>Dịch vụ, sửa chữa, bảo trì</a></li>			        <li><a href="" title="Nội thất, Ngoại thất, VLXD"><span class='icon-cate noi-that-ngoai-that-vlxd'></span>Nội thất, Ngoại thất, VLXD</a></li>        <li><a href="" title="Thiết bị điện, điện tử, dụng cụ cơ khí"><span class='icon-cate thiet-bi-dien-dien-tu-dung-cu-co-khi'></span>Thiết bị điện, điện tử, dụng cụ cơ khí</a></li>
+		<li><a href="" title="Ô tô, xe máy, xe đạp"><span class='icon-cate o-to-xe-may-xe-dap'></span>Ô tô, xe máy, xe đạp</a></li>
+		<li><a href="" title="Cây trồng, vật nuôi"><span class='icon-cate cay-trong-vat-nuoi'></span>Cây trồng, vật nuôi</a></li>
+		<li><a href="" title="Sách, tranh, quà tặng"><span class=''></span>Sách, tranh, quà tặng</a></li>
+		</ul>	   
+		 </div>
+	</div>
     </div>
-</section>
-
-<!-- Call to Action -->
-<section class="call-to-action text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-            </div>
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form>
-                    <div class="form-row">
-                        <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 {% endblock %}
 
 {% block footer %}
