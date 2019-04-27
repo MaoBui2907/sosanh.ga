@@ -1,270 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  {% block head %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>{{ title }}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="shortcut icon" href="https://www.sore.vn/public/images/favicon.ico?v=1.60" />
-	<link type="text/css" rel="stylesheet" href="https://www.sore.vn/public/css/global.css?v=1.60" media="screen" />
-		<link type="text/css" rel="stylesheet" href="https://www.sore.vn/public/css/home.css?v=1.60" media="screen" />
-	<link type="text/css" rel="stylesheet" href="https://www.sore.vn/public/css/responsives.css?v=1.60" media="screen" />
-	   <!--<script src=""></script>-->
-	<script src="https://www.sore.vn/public/js/FE/jquery-1.9.1.min.js?v=1.60"></script>
-
-	<script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-60680169-1', 'auto');
-            ga('send', 'pageview');
-	</script>
-
-  {% endblock %}
-</head>
-
-<body>
-    <div id="topScroll">&nbsp;</div>
-    <h1 style="color:#fe5d02; text-align:center "><b>WEB SO SÁNH</b></h1>
-      <div class="logo"><img src="../static/img/sosanh.png"/></div>
-     
-  {% block content %}
-  <div class="block-promotion-home">
-      <div class="home-container">
-    <div class="s-title">
-        <a href="https://www.sore.vn/tin-khuyen-mai" style="color:dodgerblue">Xem tất cả khuyến mãi <svg class="icon icon-a_next"><use xlink:href="#icon-a_next"></use></svg></a>
-        <span style="color:dodgerblue"> khuyến mãi mới nhất</span>
-    </div>
-    <div class="promotion-home">
-                <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Ưu đãi đặc biệt, giảm giá 20%"
-           href="https://www.sore.vn/den-trang-tin?href=http%3A%2F%2Fgo.masoffer.net%2Fv0%2Fvntrip%2Fherochip%2F%3Fgo%3Dhttps%253A%252F%252Fwww.vntrip.vn%252F%253Fmo_proid%253D5b06654d87ab88dc2b8b4567"
-           data-href="http://go.masoffer.net/v0/vntrip/herochip/?go=https%3A%2F%2Fwww.vntrip.vn%2F%3Fmo_proid%3D5b06654d87ab88dc2b8b4567" >
-            <div class="img">
-          <img class="imglazy" alt="Ưu đãi đặc biệt, giảm giá 20%" data-original="https://image.sore.vn/promotion/image/201805/1527145573_df68bdfe93d3400c71935412559725ee_79347.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Ưu đãi đặc biệt, giảm giá 20%</h2>
-            <div class="desc">Siêu giảm giá 20% không giới hạn cho top khách sạn tại vntrip.vn</div>
-            <div class="cont">
-              </div>
+﻿<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet"
+    type="text/css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="{{ url_for('static', filename='css/Footer-with-social-icons.css') }}" rel="stylesheet"
+    type="text/css">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"
+    type="text/css">
+	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>SOSANH.GA</title>
+	<style>
+	#header_1{
+	background-color:#373a48;
+	}
+	h1{
+	font-size:36px;
+	color:white;
+ text-align:center;
+	}
+	</style>
+	
+  </head>
   
-        </a>
-          </div>
-              <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Hot deals chỉ từ 30,000/ngày cho làn da căng mịn"
-           href="https://www.sore.vn/den-trang-tin?href=http%3A%2F%2Fgo.masoffer.net%2Fv0%2Fyes24%2Fherochip%2F%3Fgo%3Dhttps%253A%252F%252Fwww.yes24.vn%252Fnghe-vien-micell-km705600.html%253Fmo_proid%253D5ad473742f4500a28a8b4567"
-           data-href="http://go.masoffer.net/v0/yes24/herochip/?go=https%3A%2F%2Fwww.yes24.vn%2Fnghe-vien-micell-km705600.html%3Fmo_proid%3D5ad473742f4500a28a8b4567" >
-            <div class="img">
-          <img class="imglazy" alt="Hot deals chỉ từ 30,000/ngày cho làn da căng mịn" data-original="https://image.sore.vn/promotion/image/201804/1523872542_c373f9943e4d76b3da8e03f2f6f36061_31093.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Hot deals chỉ từ 30,000/ngày cho làn da căng mịn</h2>
-            <div class="desc">Hot deals chỉ từ 30,000/ngày cho làn da căng mịn</div>
-            <div class="cont">
-              </div>
+
   
-        </a>
-          </div>
-              <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Mỗi 2h bất ngời - Deal mới flash sale"
-           href="https://www.sore.vn/den-trang-tin?href=http%3A%2F%2Fgo.masoffer.net%2Fv0%2Flazada%2Fherochip%2F%3Fgo%3Dhttps%253A%252F%252Fwww.lazada.vn%252Fpages%252Fi%252Fvn%252Fact%252Flp-flash-sale%253Fmo_proid%253D5ac4441687ab88ed5a8b4567"
-           data-href="http://go.masoffer.net/v0/lazada/herochip/?go=https%3A%2F%2Fwww.lazada.vn%2Fpages%2Fi%2Fvn%2Fact%2Flp-flash-sale%3Fmo_proid%3D5ac4441687ab88ed5a8b4567" >
-            <div class="img">
-          <img class="imglazy" alt="Mỗi 2h bất ngời - Deal mới flash sale" data-original="https://image.sore.vn/promotion/image/201804/1522811844_bbde41a5e3eff9ef348e8c3dd7a50690_14223.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Mỗi 2h bất ngời - Deal mới flash sale</h2>
-            <div class="desc">Mỗi 2h bất ngời - Deal mới flash sale</div>
-            <div class="cont">
-              </div>
-  
-        </a>
-          </div>
-              <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Oto xe máy &amp; phụ kiện ưu đãi đến 30%"
-           href="https://www.sore.vn/den-trang-tin?href=http%3A%2F%2Fgo.masoffer.net%2Fv0%2Flazada%2Fherochip%2F%3Fgo%3Dhttps%253A%252F%252Fali.lazada.vn%252Fwow%252Fi%252Fvn%252FVNCampaign%252Foto-xe-may-deal-qua-tang%253Fhybrid%253D1%2526mo_proid%253D5ac444b287ab888d548b4568"
-           data-href="http://go.masoffer.net/v0/lazada/herochip/?go=https%3A%2F%2Fali.lazada.vn%2Fwow%2Fi%2Fvn%2FVNCampaign%2Foto-xe-may-deal-qua-tang%3Fhybrid%3D1%26mo_proid%3D5ac444b287ab888d548b4568" >
-            <div class="img">
-          <img class="imglazy" alt="Oto xe máy & phụ kiện ưu đãi đến 30%" data-original="https://image.sore.vn/promotion/image/201804/1522811974_5a8eab136e5ab7c2910a6521e17a4db8_25349.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Oto xe máy & phụ kiện ưu đãi đến 30%</h2>
-            <div class="desc">Oto xe máy & phụ kiện ưu đãi đến 30% cùng với nhiều quà tặng hấp dẫn</div>
-            <div class="cont">
-              </div>
-  
-        </a>
-          </div>
-              <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Voucher hot ưu đãi khủng"
-           href="https://www.sore.vn/den-trang-tin?href=http%3A%2F%2Fgo.masoffer.net%2Fv0%2Flazada%2Fherochip%2F%3Fgo%3Dhttps%253A%252F%252Fali.lazada.vn%252Fwow%252Fi%252Fvn%252FVNCampaign%252Fkhuyen-mai%253Fmo_proid%253D5ac4455687ab88a6548b4568"
-           data-href="http://go.masoffer.net/v0/lazada/herochip/?go=https%3A%2F%2Fali.lazada.vn%2Fwow%2Fi%2Fvn%2FVNCampaign%2Fkhuyen-mai%3Fmo_proid%3D5ac4455687ab88a6548b4568" >
-            <div class="img">
-          <img class="imglazy" alt="Voucher hot ưu đãi khủng" data-original="https://image.sore.vn/promotion/image/201804/1522812172_efb07d98a3b8e0b359eaf5c83ae39f5a_42804.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Voucher hot ưu đãi khủng</h2>
-            <div class="desc">Voucher hot ưu đãi khủng duy nhất tại Lazada</div>
-            <div class="cont">
-              </div>
-  
-        </a>
-          </div>
-              <div class="boxs-promotion grid-item">
-        <a class="boxs" target="_blank" title="Bay cùng AloTrip, nhận E-voucher thỏa thích mua sắm tại Nhật!  "
-           href="https://www.sore.vn/den-trang-tin?href="
-           data-href="" >
-            <div class="img">
-          <img class="imglazy" alt="Bay cùng AloTrip, nhận E-voucher thỏa thích mua sắm tại Nhật!  " data-original="https://image.sore.vn/promotion/image/201804/1522746405_9f556c5b023c3ce82e57589cdb4d9326_58137.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" />
-          <div class="expire">
-                      </div>
-            </div>
-            <h2 class="tl">Bay cùng AloTrip, nhận E-voucher thỏa thích mua sắm tại Nhật!  </h2>
-            <div class="desc">Bay cùng AloTrip, nhận E-voucher thỏa thích mua sắm tại Nhật!</div>
-            <div class="cont">
-              </div>
-  
-        </a>
-          </div>
-      
-    </div>
-      </div>
-  </div>
-  <!--intro-home-->
-<div class="block-intro-home intro-cate">
-    <div class="container">
-	<article>
-	    <h2>SoSanh.ga - So sánh giá rẻ và tìm nơi bán hàng</h2>
-
-<p>Chào mừng bạn đến với sore.vn. Đây là website miễn phí giúp bạn <strong>tìm sản phẩm</strong>, <strong>so sánh giá rẻ</strong> các sản phẩm, mặt hàng và cửa hàng với nhau trên khắp cả nước. Mọi thông tin như giá cả các sản phẩm điện máy, điện thoại, đồ điện tử, điện lạnh, kỹ thuật số, thiết bị văn phòng, viễn thông, gia dụng, mẹ và bé, thời trang, ... được thống kê giá một cách chính xác nhất từ các nhà bán lẻ lớn, nhỏ tại Việt Nam.</p>
-
-<p>Việc quyết định mua hàng không chỉ phụ thuộc vào giá cả. Website <em>so sánh giá </em>Sorẻ hướng đến các thông tin quan trọng về sản phẩm, cửa hàng hay nhà bán hàng, gần hay xa khu vực địa lý để bạn có thể quyết định mua hàng một cách dễ dàng hơn cùng nhiều thông tin khuyến mãi, mã giảm giá, quà tặng kèm (nếu có).</p>
-
-<p><em>Web so sánh</em> SoSanh.ga ngày càng được sự quan tâm của người dùng. Chính vì thế, mọi ý kiến đóng góp khách quan đều góp phần thành công cho Sorẻ.vn</p>	</article>
-    </div>
-</div>
-<!--end-->
-
-  {% endblock %}
-  <!-- Footer -->
-  {% block footer %}
-
-  {% endblock %}
-  <!-- Bootstrap core JavaScript -->
-  <footer id="footer" class="footer home footer-home">
-    <div class="content_footer container">
-	<div class="copyright">
-	    <span class="footer-title" style="color:dodgerblue">CÔNG TY CP SO SANH.GA</span>
-	    <p class="footer-address">MS: 0314066756 - Email: contact@sosanh.ga </p>
-	    <p class="footer-address"> ĐC: Khu phố 6, phường Linh Trung, Quận Thủ Đức, TPHCM</p>
-	    	</div>
-	<div class="foot-mid">        
-	    <a class="extend-a" href="">Quy chế hoạt động</a>
-	    <a class="extend-a" href="">Chính sách bảo mật</a>
-	    <a class="extend-a" href="">Giải quyết tranh chấp</a>
-	</div>  
-	<div class="foot-mid">
-	    <a class="extend-a reg" href="" title="Đưa sản phẩm lên website">Đưa sản phẩm lên </a>
-	    <a class="extend-a" href="" title="Đối tác liên hệ">
-		Đối tác liên hệ            </a>
-            <a class="change-version" href="" title="Xem phiên bản Mobile">Phiên bản Mobile</a>
-	</div>
-	<div class="foot-right">
-
-	</div>
-    </div>
-
-</footer>
-
-  {% block js %}
-
-  <script src="{{ url_for('static', filename='jquery/jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script>
-      $(document).ready(function () {
-    /* slide text */
-    $('#slide-txt').owlCarousel({
-        items: 1,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        lazyLoad: true,
-        autoplayHoverPause: true,
-        loop: true,
-        margin: 0,
-        navText: ['', ''],
-        stagePadding: 0
-    });
-      });
-  </script>
-<script>
-  (function (d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id))
-    return;
-js = d.createElement(s);
-js.id = id;
-js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-</script>
-
-<script  src="https://www.sore.vn/public/js/FE/suggestSearch.js?v=1.60"></script>
-
-  <!--<script  src=""></script>-->
-
-  <script>
-          var js_url = "";
-          var img_url = "";
-</script>
-      <script>
-              $(document).ready(function () {
-                  var mid = 0;
-                  if ($('#h_modelid').length) {
-                      mid = $('#h_modelid').val();
-                  }
-                  ajaxLoadViewedHistory(mid);
-              });
-    </script>
-
-
-<script src="https://www.sore.vn/public/js/FE/placeholderTypewriter.js?v=1.60"></script>
-<script>
-          /* Placeholder Typewriter */
-          var placeholderText = [
-              "Bạn muốn mua gì?",
-              "iPhone X 64GB?",
-              "Samsung Galaxy A9 Pro?",
-              "Samsung Galaxy A9?",
-              "iPhone 7 32GB?",
-              "Oppo Neo 9 (Oppo A37)?",
-              "Nhập thông tin sản phẩm bạn cần tìm?"
-          ];
-          $('#txt_Keyword').placeholderTypewriter({text: placeholderText});
-</script>
-  {% endblock %}
-</body>
-
+  <body>
+  <div id="header_1" >
+  <h1>SOSANH.GA <br>Mang đến cho bạn những lựa chọn tốt nhất</h1>
+ </div>
+ {% block content%}
+  {% endblock %}  
+	{% block footer%}
+  {% endblock %} 
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
