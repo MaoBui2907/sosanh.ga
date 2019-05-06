@@ -1,40 +1,20 @@
 ﻿<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
-	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet"
-    type="text/css">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="{{ url_for('static', filename='css/Footer-with-social-icons.css') }}" rel="stylesheet"
-    type="text/css">
-	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"
-    type="text/css">
-	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.ico') }}">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<title>{{title}}</title>
+    {% include "head.html"  %}
+    <title>{{title}}</title>
 
 	{% include "style.html" %}
 	
   </head>
   
-
-  
   <body>
   <div id="header_1" >
   <h1>SOSANH.GA <br>Mang đến cho bạn những lựa chọn tốt nhất</h1>
  </div>
- {% block content%}
-  {% endblock %}  
-	{% block footer%}
-  {% endblock %} 
+    {% block content%}
+
+    {% endblock %}  
+
+    {% include "footer.html" %}
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
