@@ -1,7 +1,9 @@
 
 # coding=utf-8
 from flask import Flask
+from flask import request
 from flask import render_template
+from crawler import search_fptshop, search_thegioididong, search_vienthonga, merge_data
 app = Flask(__name__)
 
 # Cài đặt với đường dẫn /
@@ -15,8 +17,15 @@ def search():
     return render_template('search.html', title='So sánh giá')
 
 # Cài đặt với đường dẫn /ten-san-pham
-@app.route("/dssanpham")
-def listproduct():
+@app.route("/timkiem")
+def search():
+    keyword = request.args.get('keyword', default='', type=str)
+
+    fptshop = search_fptshop(keyword)
+    tgdd = search_thegioididong(keyword)
+    vienthonga = search_vienthonga(keyword)
+
+    data = merge_data(fptshop, tgdd, vienthonga)
     return render_template('listproduct.html', title='Danh sách sản phẩm')
 # Cài đặt với đường dẫn /ten-san-pham
 @app.route("/sanpham")
