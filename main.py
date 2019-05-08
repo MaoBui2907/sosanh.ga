@@ -18,7 +18,8 @@ def search():
 # Cài đặt với đường dẫn /ten-san-pham
 @app.route("/dssanpham")
 def listproduct():
-    return render_template('listproduct.html', title='Danh sách sản phẩm')
+    # return render_template('listproduct.html', title='Danh sách sản phẩm')
+    return render_template('dssp.html', title='Danh sách sản phẩm')
 
 if __name__ == "__main__":
     # Only for debugging while developing
