@@ -1,21 +1,29 @@
 ﻿<html>
-  <head>
-    {% include "head.html"  %}
-    <title>{{title}}</title>
 
-  {% include "styledssp.html" %}
+<head>
+  {% block head %}
   
-  
-  </head>
-  
-  <body>
+  {% include "head.html"  %}
+  <title>{{title}}</title>
+
+  {% endblock %}
+</head>
+
+<body>
   <!-- <div id="header_1" >
   <h1>SOSANH.GA <br>Mang đến cho bạn những lựa chọn tốt nhất</h1>
  </div> -->
-    {% block content%}
+  {% block content%}
 
-    {% endblock %}  
+  {% endblock %}
 
-    {% include "footer.html" %}
-  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+  {% include "footer.html" %}
+
+  {% block script %}
+
+  {% endblock %}
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
