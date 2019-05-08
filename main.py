@@ -4,6 +4,7 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)
 
+
 # Cài đặt với đường dẫn /
 @app.route("/")
 def homepage():
