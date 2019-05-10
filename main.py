@@ -4,6 +4,7 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)
 
+
 # Cài đặt với đường dẫn /
 @app.route("/")
 def homepage():
@@ -17,11 +18,9 @@ def search():
 # Cài đặt với đường dẫn /ten-san-pham
 @app.route("/dssanpham")
 def listproduct():
-    return render_template('listproduct.html', title='Danh sách sản phẩm')
-# Cài đặt với đường dẫn /ten-san-pham
-@app.route("/sanpham")
-def product():
-    return render_template('product.html', title='Sản phẩm')
+    # return render_template('listproduct.html', title='Danh sách sản phẩm')
+    return render_template('dssp.html', title='Danh sách sản phẩm')
+
 if __name__ == "__main__":
     # Only for debugging while developing
     #app.run(host='0.0.0.0', debug=True, port=80)

@@ -17,6 +17,20 @@ body {
   margin: 0;
 }
 
+/* Trang chủ */
+.slogan{
+  font-size: 70px;
+  color: #0039e6;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif
+}
+.slogan1{
+  font-size: 50px;
+  color: #4d79ff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif
+}
+
 /**
  * Add the correct display in IE 9-.
  */
@@ -821,7 +835,7 @@ legend {
       align-items: center;
   font-family: 'Poppins', sans-serif;
   background: url("../img/Searchs_006.png");
-  background: url("../img/1.jpg");
+  /* background: url("../img/home1.jpg"); */
   background-size: cover;
   background-position: center center;
   padding: 15px;
@@ -895,7 +909,7 @@ legend {
   left: 0;
   height: 100%;
   background: transparent;
-  border: 0;
+  border: 1;
   padding: 0;
   cursor: pointer;
   display: flex;
