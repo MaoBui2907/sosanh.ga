@@ -1,4 +1,4 @@
-#!/run/media/nguyenmao/Data/Project/sosanh.ga/venv/bin/python
+#!/home/nguyenmao/websites/flask/sosanh.ga/source/sosanh.ga/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

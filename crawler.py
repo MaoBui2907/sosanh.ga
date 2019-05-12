@@ -174,4 +174,4 @@ def search_vienthonga(keyword):
 
     return ouput_data
 
-print(merge_data([search_fptshop('iphone'), search_thegioididong('iphone'), search_vienthonga('iphone')]))
+#print(merge_data([search_fptshop('iphone'), search_thegioididong('iphone'), search_vienthonga('iphone')]))
