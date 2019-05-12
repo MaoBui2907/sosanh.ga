@@ -1,67 +1,182 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<div class="container"> 
-     <div class="card"> 
-      <div class="container-fliud"> 
-       <div class="wrapper row"> 
-        <div class="preview col-md-6"> 
-         <div class="preview-pic tab-content"> 
-          <div class="tab-pane active" id="pic-1"><img src="../static/img/dienthoai_1.jpg" alt="">
-          </div> 
-          <div class="tab-pane" id="pic-2"><img src="../static/img/dienthoai_1.jpg" alt="">
-          </div> 
-          <div class="tab-pane" id="pic-3"><img src="../static/img/dienthoai_1.jpg" alt="">
-          </div> 
-          <div class="tab-pane" id="pic-4"><img src="../static/img/dienthoai_1.jpg" alt="">
-          </div> 
-          <div class="tab-pane" id="pic-5"><img src="../static/img/dienthoai_1.jpg" alt="">
-          </div> 
-         </div> 
-         <ul class="preview-thumbnail nav nav-tabs"><div class="logo_menuchinh" style="float:left; padding-top:5px; padding-left:10px; color:#fff; margin-left:auto; margin-right:auto; text-align=center; line-height:40px; font-size:16px;font-weight:bold;font-family:Arial"></div><div class="menu-icon"><span></span></div> 
-          <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="../static/img/dienthoai_1.jpg" alt=""></a>
-          </li> 
-          <li><a data-target="#pic-2" data-toggle="tab"><img src="../static/img/dienthoai_1.jpg" alt=""></a>
-          </li> 
-          <li><a data-target="#pic-3" data-toggle="tab"><img src="../static/img/dienthoai_1.jpg" alt=""></a>
-          </li> 
-          <li><a data-target="#pic-4" data-toggle="tab"><img src="../static/img/dienthoai_1.jpg" alt=""></a>
-          </li> 
-          <li><a data-target="#pic-5" data-toggle="tab"><img src="../static/img/dienthoai_1.jpg" alt=""></a>
-          </li> 
-         </ul> 
-        </div> 
-        <div class="details col-md-6"> 
-         <h2 class="product-title" style="color: darkblue; size: 40px;"><b>iPhone Xs Max 64GB</b> </h2> 
-         <div class="rating"> 
-          <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> 
-          </div> <span class="review-no">123 đánh giá</span> 
-         </div> 
-         <p class="product-description">Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cáp, Cây lấy sim<br>
-        Bảo hành chính hãng 12 tháng<br>
-        1 đổi 1 trong 1 tháng nếu lỗi<br>
-        Hàng chính hãng<br>
-        Giao hàng miễn phí toàn quốc trong 60 phút<br>
-        iPhone Xs Max 64GB là chiếc iPhone có màn hình lớn nhất từ trước đến nay, mang đến những trải nghiệm tuyệt vời về màn hình và thời lượng pin.
-        Màn hình lớn 6,5 inch chuẩn Super Retina siêu sắc nét
-iPhone Xs Max 64GB có màn hình vượt trội so với mọi thế hệ iPhone trước đây khi lớn tới 6,5 inch, được làm từ tấm nền OLED, hỗ trợ hiển thị HDR. 
-HDR mang đến màu sắc chính xác, màu đen có chiều sâu, độ sáng và độ tương phản tuyệt vời. 
-Bạn sẽ được tận hưởng một màn hình cực lớn, độ phân giải siêu cao 2688 x 1242 pixels cho trải nghiệm xem đáng kinh ngạc.
-iPhone Xs Max 64GB được hoàn thiện từ những vật liệu đặc biệt, đó là viền thép không gỉ sáng bóng và mặt kính bền nhất trong thế giới smartphone. Kỹ thuật gia công chính xác hoàn hảo của Apple mang đến chiếc điện thoại cứng cáp, thời trang, vừa vặn trong lòng bàn tay bạn. Ba màu sắc thời thượng Xám không gian, Bạc và Vàng cho những lựa chọn cá tính. Đặc biệt, hai phiên bản màu Vàng và Xám được sơn bằng quá trình xử lý màu PVD, tạo hiệu ứng ánh sáng qua lớp kính rất đẹp mắt.
-</p> 
-         <h4 class="price">Giá bán: 4.000.000 đ</h4> 
-         <p class="vote"><strong>91%</strong> of người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
-         </p> 
-         <div class="action"> <a href="https://www.thegioididong.com/" target="_blank">            <button class="add-to-cart btn btn-default" type="button">Đi đến trang mua hàng</button>            </a> <a href="http://hocwebgiare.com/" target="_blank">            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>            </a> 
-         </div> 
-        </div> 
-       </div> 
-      </div> 
-     </div>
-    </div> 
-    
-    	
+{% block head%}
+
+{{ super() }}
+
+<style>
+	a.list-group-item {
+		height: auto;
+		min-height: 220px;
+	}
+
+	a.list-group-item.active small {
+		color: #fff;
+	}
+
+	.stars {
+		margin: 20px auto 1px;
+	}
+</style>
 {% endblock %}
-{% block footer %}
-    {% include "footer.html" %}
+
+{% block content %}
+{% include "header.html" %}
+<div class="container-fluid" style="margin-top:100px">
+
+	<div class="row">
+
+		<!--Grid column-->
+		<div class="col-md-6 mb-4">
+
+			<img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+
+		</div>
+		<!--Grid column-->
+
+		<!--Grid column-->
+		<div class="col-md-6 mb-4">
+
+			<!--Content-->
+			<div class="p-4">
+
+				<div class="mb-3">
+					<a href="">
+						<span class="badge purple mr-1">Category 2</span>
+					</a>
+					<a href="">
+						<span class="badge blue mr-1">New</span>
+					</a>
+					<a href="">
+						<span class="badge red mr-1">Bestseller</span>
+					</a>
+				</div>
+
+				<p class="lead">
+					<span class="mr-1">
+						<del>$200</del>
+					</span>
+					<span>$100</span>
+				</p>
+
+				<p class="lead font-weight-bold">Description</p>
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa
+					sint voluptatibus!
+					Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+
+				<form class="d-flex justify-content-left">
+					<!-- Default input -->
+					<input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+					<button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+						<i class="fas fa-shopping-cart ml-1"></i>
+					</button>
+
+				</form>
+
+			</div>
+			<!--Content-->
+
+		</div>
+		<!--Grid column-->
+
+	</div>
+
+	<div class="row">
+		<div class="well">
+			<h1 class="text-center">Vote for your favorite</h1>
+			<div class="list-group">
+				<a href="#" class="list-group-item active">
+					<div class="media col-md-3">
+						<figure class="pull-left">
+							<img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250"
+								alt="placehold.it/350x250">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<h4 class="list-group-item-heading"> List group heading </h4>
+						<p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod salutandi
+							dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam molestiae an has. At nisl
+							platonem eum.
+							Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale tantas vim ea,
+							eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr deserunt mediocrem. Mea facilisi
+							torquatos ad.
+						</p>
+					</div>
+					<div class="col-md-3 text-center">
+						<h2> 14240 <small> votes </small></h2>
+						<button type="button" class="btn btn-default btn-lg btn-block"> Vote Now! </button>
+						<div class="stars">
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star-empty"></span>
+						</div>
+						<p> Average 4.5 <small> / </small> 5 </p>
+					</div>
+				</a>
+				<a href="#" class="list-group-item">
+					<div class="media col-md-3">
+						<figure class="pull-left">
+							<img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250"
+								alt="placehold.it/350x250">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<h4 class="list-group-item-heading"> List group heading </h4>
+						<p class="list-group-item-text"> Eu eum corpora torquatos, ne postea constituto mea, quo tale lorem facer
+							no. Ut sed odio appetere partiendo, quo meliore salutandi ex. Vix an sanctus vivendo, sed vocibus accumsan
+							petentium ea.
+							Sed integre saperet at, no nec debet erant, quo dico incorrupte comprehensam ut. Et minimum consulatu ius,
+							an dolores iracundia est, oportere vituperata interpretaris sea an. Sed id error quando indoctum, mel suas
+							saperet at.
+						</p>
+					</div>
+					<div class="col-md-3 text-center">
+						<h2> 12424 <small> votes </small></h2>
+						<button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
+						<div class="stars">
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star-empty"></span>
+						</div>
+						<p> Average 3.9 <small> / </small> 5 </p>
+					</div>
+				</a>
+				<a href="#" class="list-group-item">
+					<div class="media col-md-3">
+						<figure class="pull-left">
+							<img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250"
+								alt="placehold.it/350x250">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<h4 class="list-group-item-heading"> List group heading </h4>
+						<p class="list-group-item-text"> Ut mea viris eripuit theophrastus, cu ponderum accusata consequuntur cum.
+							Suas quaestio cotidieque pro ea. Nam nihil persecuti philosophia id, nam quot populo ea.
+							Falli urbanitas ei pri, eu est enim volumus, mei no volutpat periculis. Est errem iudicabit cu. At usu
+							vocibus officiis, ad ius eros tibique appellantur.
+						</p>
+					</div>
+					<div class="col-md-3 text-center">
+						<h2> 13540 <small> votes </small></h2>
+						<button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
+						<div class="stars">
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star"></span>
+							<span class="glyphicon glyphicon-star-empty"></span>
+						</div>
+						<p> Average 4.1 <small> / </small> 5 </p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

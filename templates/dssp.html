@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+{% include "styledssp.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+{% include "header.html" %}
+
+<div class="container-fluid" style="margin: 90px 0px 20px 0px">
+    <div class="row">
+        {% for item in data %}
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="/sanpham">
+                        <img class="pic-1"
+                            src="{{item['image']}}">
+                    </a>
+                    <!-- <span class="product-new-label">New</span> -->
+                    <!-- <span class="product-discount-label">-5%</span> -->
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="/sanpham">{{item['name']}}</a></h3>
+                    <div class="price">
+                        10000&nbsp;
+                        <span>14.990.000₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
