@@ -11,14 +11,15 @@
 {% include "header.html" %}
 
 <div class="container-fluid" style="margin: 90px 0px 20px 0px">
+    {% if data|length != 0 %}
+    <h3>Có {{data|length}} kết quả tìm kiểm</h3>
     <div class="row">
         {% for item in data %}
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
                     <a href="/sanpham">
-                        <img class="pic-1"
-                            src="{{item['image']}}">
+                        <img class="pic-1" src="{{item['image']}}">
                     </a>
                     <!-- <span class="product-new-label">New</span> -->
                     <!-- <span class="product-discount-label">-5%</span> -->
@@ -34,6 +35,21 @@
         </div>
         {% endfor %}
     </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-offset-3">
+            <ul class="pagination pagination-large">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+    </div>
+    {% else %}
+        <h3>không tìm thấy kết quả nào</h3>
+    {% endif %}
 </div>
 
 

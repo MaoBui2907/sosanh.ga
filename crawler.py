@@ -54,9 +54,6 @@ def merge_data(datas):
 
     return ouput_list
                 
-            
-
-
 def search_thegioididong(keyword):
     """Search with thegioididong"""
     url = "https://www.thegioididong.com/tim-kiem?key=" + keyword
@@ -108,7 +105,6 @@ def search_fptshop(keyword):
                      'fs-icpri').find('del').find(text=True)) if i.find('p',
                      'fs-icpri').find('del') is not None else '' ) if i.find('p',
                      'fs-icpri') is not None  else '','link': 'https://fptshop.com' + i.find('a')['href']} for i in products_blocks]
-
     ouput_data = {
         "site": "fptshop",
         "products": products
