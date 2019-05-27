@@ -16,19 +16,21 @@ def homepage():
 @app.route("/timkiem")
 def search():
     keyword = request.args.get('keyword', default='', type=str)
-
     fptshop = search_fptshop(keyword)
     tgdd = search_thegioididong(keyword)
     vienthonga = search_vienthonga(keyword)
-
     data = merge_data([fptshop, tgdd, vienthonga])
     return render_template('dssp.html', title='Danh sách sản phẩm', data=data[:20])
 
 # Cài đặt với đường dẫn /ten-san-pham
-@app.route("/sanpham")
+@app.route("/sanpham", methods=['GET','POST'])
 def product():
-    return render_template('product.html', title='Sản phẩm')
-
+    if request.method == 'POST':
+        data = request.get_json()
+        print(data)
+        return redirect(url_for('/sanpham'))
+    else:
+        return render_template('product.html', title='Sản phẩm')
 
 if __name__ == "__main__":
     # Only for debugging while developing
