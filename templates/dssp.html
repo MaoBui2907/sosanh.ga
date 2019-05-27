@@ -18,16 +18,16 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="#" onclick="e => function(e){
-                        $.POST("/sanpham", item);
-                    }">
+                    <a href="" onclick="function(){
+                        $.post("/sanpham", {data: item}); }">
                         <img class="pic-1" src="{{item['image']}}">
                     </a>
                     <!-- <span class="product-new-label">New</span> -->
                     <!-- <span class="product-discount-label">-5%</span> -->
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="/sanpham">{{item['name']}}</a></h3>
+                    <h3 class="title"><a href="" onclick="e => function(e){
+                            $.post("/sanpham", {data: item}); }">{{item['name']}}</a></h3>
                     <div class="price">
                         10000&nbsp;
                         <span>14.990.000₫</span>
@@ -50,7 +50,7 @@
         </div>
     </div>
     {% else %}
-        <h3>không tìm thấy kết quả nào</h3>
+    <h3>không tìm thấy kết quả nào</h3>
     {% endif %}
 </div>
 {% endblock %}

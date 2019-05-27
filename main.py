@@ -27,12 +27,11 @@ def search():
 def product():
     if request.method == 'POST':
         data = request.get_json()
-        print(data)
-        return redirect(url_for('/sanpham'))
+        return redirect('.product', data=data)
     else:
         return render_template('product.html', title='Sản phẩm')
 
 if __name__ == "__main__":
     # Only for debugging while developing
-    #app.run(host='0.0.0.0', debug=True, port=5000)
+    # app.run(host='0.0.0.0', debug=True, port=5000)
     app.run()

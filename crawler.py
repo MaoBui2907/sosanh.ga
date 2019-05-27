@@ -239,9 +239,6 @@ def search_viettelstore(keyword):
     if (html_text.body.find('div', 'div_Danh_Sach_San_Pham') is not None):
         products_blocks=html_text.body.find(
             'div', attrs = {'id',  'div_Danh_Sach_San_Pham'}).findAll('div', 'ProductList3Col_item')
-
-        # print(products_blocks)
-
         products=[{'name': i.find('div', 'name').text, 'image': i.find('img')['src'],
                      'price': get_only_digit(i.find('div', 'price-1').find(text=True)) if i.find('div',
                                                                                                  'price-1') is not None else '', 'delprice': get_only_digit(i.find('span',
