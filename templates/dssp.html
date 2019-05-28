@@ -4,14 +4,92 @@
 {{ super() }}
 {% include "styledssp.html" %}
 
+<style>
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        transition: 1s;
+    }
+
+    .span {
+        position: absolute;
+        transform: translate(-50%, 50%);
+        width: 120px;
+        height: 120px;
+        top: 35%;
+        border: 5px solid #262626;
+        z-index: 1;
+        animation: animar 2.5s linear infinite;
+    }
+
+    .span:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #262626;
+        animation: animarbg 2.5s linear infinite;
+    }
+
+    @keyframes animar {
+        0% {
+            transform: translate(-50%, 50%) rotate(0deg);
+        }
+
+        25% {
+            transform: translate(-50%, 50%) rotate(180deg);
+        }
+
+        50% {
+            transform: translate(-50%, 50%) rotate(180deg);
+        }
+
+        75% {
+            transform: translate(-50%, 50%) rotate(360deg);
+        }
+
+        100% {
+            transform: translate(-50%, 50%) rotate(360deg);
+        }
+    }
+
+    @keyframes animarbg {
+        0% {
+            height: 0;
+        }
+
+        25% {
+            height: 0;
+        }
+
+        50% {
+            height: 100%;
+        }
+
+        75% {
+            height: 100%;
+        }
+
+        100% {
+            height: 0;
+        }
+    }
+</style>
+
 {% endblock %}
 
 {% block content %}
 
 {% include "header.html" %}
-<div class="container-fluid" style="margin: 90px 0px 20px 0px">
+<div class="container" style="margin-top: 90px">
     {% if data|length != 0 %}
-    <h3>Hiển thị {{data|length}} trong {{max_data}} kết quả tìm kiểm</h3>
+    <h5>Tìm thấy {{max_data}} kết quả với từ khóa '{{keyword}}'.</h5>
     <div class="row">
         {% for item in data %}
         <div class="col-md-3 col-sm-6">
@@ -32,26 +110,27 @@
         </div>
         {% endfor %}
     </div>
-    <div class="row">
-        <div class="col-md-6 col-lg-offset-3">
-            <ul class="pagination pagination-large">
-                {% for i in range(1, max_page + 1) %}
-                {%if(i == page)%}
-                <li class="active"><a href="" class="change_page">{{i}}</a></li>
-                {% else %}
-                <li><a href="" class="change_page">{{i}}</a></li>
-                {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+    <ul class="pagination justify-content-center">
+        {% for i in range(1, max_page + 1) %}
+        {%if(i == page)%}
+        <li class="page-item active"><a href="" class="page-link change_page">{{i}}</a></li>
+        {% else %}
+        <li class="page-item"><a href="" class="page-link change_page">{{i}}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
     {% else %}
     <h3>không tìm thấy kết quả nào</h3>
     {% endif %}
 </div>
+<div class="loader text-center" style="display: none">
+    <span class="span"></span>
+</div>
 {% endblock %}
 
 {% block script %}
+{{ super() }}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     $('.product').click(function (e) {
         e.preventDefault();
@@ -60,7 +139,24 @@
             url: "/sanpham",
             data: JSON.stringify({ data: $(this).attr('data') }),
             contentType: 'application/json',
+            beforeSend: function () {
+                $(".loader").show();
+                $('body > *').css('filter', 'blur(2px)')
+                $('.loader').css('filter', '')
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                swal({
+                    title: "Lỗi",
+                    text: xhr.text,
+                    icon: "error",
+                    button: "Đóng",
+                });
+                $('.loader').hide();
+                $('body > *').css('filter', '')
+            },
             success: function (response) {
+                $(".loader").hide();
+                $('body > *').css('filter', '')
                 document.write(response);
             }
         })

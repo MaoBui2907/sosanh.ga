@@ -24,11 +24,13 @@ def search():
         tgdd = search_thegioididong(keyword)
         vienthonga = search_vienthonga(keyword)
         data = merge_data([fptshop, tgdd, vienthonga])
-        max_page = math.ceil(len(data) / 20.0)
+        num_per_page = 16
+
+        max_page = math.ceil(len(data) / num_per_page)
         # print(max_page)
         if (page > max_page):
             page = max_page
-        return render_template('dssp.html', title='Danh sách sản phẩm', data=data[(page-1)*20:page*20 if page*20 < len(data) else len(data)], max_page=max_page, page=page, max_data=len(data))
+        return render_template('dssp.html', title='Danh sách sản phẩm', keyword=keyword, data=data[(page-1)*num_per_page:page*num_per_page if page*num_per_page < len(data) else len(data)], max_page=max_page, page=page, max_data=len(data))
 
 # Cài đặt với đường dẫn /ten-san-pham
 @app.route("/sanpham", methods=['GET', 'POST'])

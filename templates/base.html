@@ -2,12 +2,12 @@
 
 <head>
   {% block head %}
-  
+
   {% include "head.html"  %}
   <title>{{title}}</title>
 
   {% endblock %}
-  
+
 </head>
 
 <body>
@@ -22,7 +22,15 @@
   {% include "footer.html" %}
 
   {% block script %}
-
+  <script>
+    $('.search').keypress(function (event) {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == 13) {
+        event.preventDefault()
+        $(location).attr('href', "/timkiem?keyword=" + $(this).val());
+      }
+    })
+  </script>
   {% endblock %}
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
