@@ -24,15 +24,21 @@
 <div class="container" style="margin-top: 90px">
 	<div class="row">
 		<div class="col-12 row w-100">
-			<div class="card">
-				<div class="card-body row">
-					<div class="col-md-6 col-sm-12">
-						<img src="{{image}}" width="120px" />
+			<div class="card card-border border-danger mb-3">
+				<div class="row no-gutters">
+					<div class="col-md-5">
+						<img src="{{image}}" style="margin: 20px" min-width="300px" class="card-img" alt="{{name}}">
 					</div>
-					<div class="col-md-6 col-sm-12">
-						<h4>{{ name }}</h4>
-						<div>
-							{{shops[0]["Mô tả ngắn"]}}
+					<div class="col-md-7">
+						<div class="card-body">
+							{% if compare[0]['decription'] == "" %}
+								<div class="decription">
+									{{ compare[0]['decription'] | safe }}
+								</div>
+							{% else %}
+								<h3>{{ name }} </h3>
+								<p> {{ compare[0]['price'] }} </p>
+							{% endif %}
 						</div>
 					</div>
 				</div>

@@ -95,12 +95,12 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="" class="product" data="{{item}}">
+                    <a href="" class="product" key="{{item}}">
                         <img class="pic-1" src="{{item['image']}}">
                     </a>
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="" class="product" data="{{item}}">{{item['name']}}</a></h3>
+                    <h3 class="title"><a href="" class="product" key="{{item}}">{{item['name']}}</a></h3>
                     <div class="price">
                         {{item['compare'][0]['price']}}&nbsp;
                         <span>{{ item['compare'][0]['delprice'] if item['compare'][0]['delprice'] != ''}}</span>
@@ -134,10 +134,11 @@
 <script>
     $('.product').click(function (e) {
         e.preventDefault();
+        console.log($(this).attr('key'))
         $.ajax({
             type: 'POST',
             url: "/sanpham",
-            data: JSON.stringify({ data: $(this).attr('data') }),
+            data: $(this).attr('key'),
             contentType: 'application/json',
             beforeSend: function () {
                 $(".loader").show();
@@ -158,7 +159,7 @@
                 $(".loader").hide();
                 $('body > *').css('filter', '')
                 document.write(response);
-            }, 
+            },
             timeout: 25000
         })
     })
