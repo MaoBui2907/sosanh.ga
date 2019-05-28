@@ -9,28 +9,23 @@
 {% block content %}
 
 {% include "header.html" %}
-
 <div class="container-fluid" style="margin: 90px 0px 20px 0px">
     {% if data|length != 0 %}
-    <h3>Có {{data|length}} kết quả tìm kiểm</h3>
+    <h3>Hiển thị {{data|length}} trong {{max_data}} kết quả tìm kiểm</h3>
     <div class="row">
         {% for item in data %}
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="" onclick="function(){
-                        $.post("/sanpham", {data: item}); }">
+                    <a href="" onclick="post_data('{{item[\'name\']}}')">
                         <img class="pic-1" src="{{item['image']}}">
                     </a>
-                    <!-- <span class="product-new-label">New</span> -->
-                    <!-- <span class="product-discount-label">-5%</span> -->
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="" onclick="e => function(e){
-                            $.post("/sanpham", {data: item}); }">{{item['name']}}</a></h3>
+                    <h3 class="title"><a href="" onclick="post_data('{{item[\'name\']}}')">{{item['name']}}</a></h3>
                     <div class="price">
-                        10000&nbsp;
-                        <span>14.990.000₫</span>
+                        {{item['compare'][0]['price']}}&nbsp;
+                        <span>{{ item['compare'][0]['delprice'] if item['compare'][0]['delprice'] != ''}}</span>
                     </div>
                 </div>
             </div>
@@ -40,12 +35,13 @@
     <div class="row">
         <div class="col-md-6 col-lg-offset-3">
             <ul class="pagination pagination-large">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">...</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
+                {% for i in range(1, max_page + 1) %}
+                {%if(i == page)%}
+                <li class="active"><a href="" class="change_page">{{i}}</a></li>
+                {% else %}
+                <li><a href="" class="change_page">{{i}}</a></li>
+                {% endif %}
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -53,4 +49,22 @@
     <h3>không tìm thấy kết quả nào</h3>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    function post_data(a) {
+        console.log(a)
+        $.post('/timkiem', {name: a})
+    }
+</script>
+<script>
+    $.urlParam = function (name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+    }
+    $('.change_page').click(function (e) {
+        $(this).attr('href', '/timkiem?page=' +$(this).text() + '&keyword=' + $.urlParam('keyword'));
+    })
+</script>
 {% endblock %}
