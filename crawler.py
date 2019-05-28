@@ -29,6 +29,16 @@ def sort_data_list(data, reverse=False):
     return sorted(data, key=lambda k: k['price'], reverse=reverse)
 
 
+def get_product(site, link):
+    """"Lấy thông tin sản phẩm với các site khác nhau"""
+    if (site == "thegioididong"):
+        return get_product_theogioididong(link)
+    elif (site == "fptshop"):
+        return get_product_fptshop(link)
+    elif (site == "vienthonga"):
+        return get_product_vienthonga(link)
+    return(0)
+
 def get_product_theogioididong(link):
     """Lấy thông tin từ trang thế giới di động"""
     url = link.rstrip()

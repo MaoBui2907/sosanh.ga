@@ -17,12 +17,12 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid4">
                 <div class="product-image4">
-                    <a href="" onclick="post_data('{{item[\'name\']}}')">
+                    <a href="" class="product" data="{{item}}">
                         <img class="pic-1" src="{{item['image']}}">
                     </a>
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="" onclick="post_data('{{item[\'name\']}}')">{{item['name']}}</a></h3>
+                    <h3 class="title"><a href="" class="product" data="{{item}}">{{item['name']}}</a></h3>
                     <div class="price">
                         {{item['compare'][0]['price']}}&nbsp;
                         <span>{{ item['compare'][0]['delprice'] if item['compare'][0]['delprice'] != ''}}</span>
@@ -53,10 +53,18 @@
 
 {% block script %}
 <script>
-    function post_data(a) {
-        console.log(a)
-        $.post('/timkiem', {name: a})
-    }
+    $('.product').click(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "/sanpham",
+            data: JSON.stringify({ data: $(this).attr('data') }),
+            contentType: 'application/json',
+            success: function (response) {
+                document.write(response);
+            }
+        })
+    })
 </script>
 <script>
     $.urlParam = function (name) {
@@ -64,7 +72,7 @@
         return results[1] || 0;
     }
     $('.change_page').click(function (e) {
-        $(this).attr('href', '/timkiem?page=' +$(this).text() + '&keyword=' + $.urlParam('keyword'));
+        $(this).attr('href', '/timkiem?page=' + $(this).text() + '&keyword=' + $.urlParam('keyword'));
     })
 </script>
 {% endblock %}
