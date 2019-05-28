@@ -158,7 +158,8 @@
                 $(".loader").hide();
                 $('body > *').css('filter', '')
                 document.write(response);
-            }
+            }, 
+            timeout: 25000
         })
     })
 </script>

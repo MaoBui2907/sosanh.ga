@@ -37,10 +37,12 @@ def search():
 def product():
     if request.method == 'POST':
         data = eval(request.get_json()['data'])
+        print("data", data)
         name = data['name']
         image = data['image']
         products = [{'site': i['site'], 'data': get_product(
             i['site'], i['link'])} for i in data['compare']]
+        print("products", products)
         return render_template('product.html', title='Sản phẩm', shops=products, image=image, name=name)
     elif request.method == 'GET':
         return render_template('product.html', title='Sản phẩm')

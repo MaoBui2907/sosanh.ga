@@ -1,4 +1,4 @@
-from crawler import search_fptshop, search_thegioididong, search_vienthonga, merge_data, get_product_fptshop
+from crawler import get_product_theogioididong, get_product_vienthonga, get_product_fptshop
 
 
 # oput = search_thegioididong("iphone")
@@ -6,4 +6,6 @@ from crawler import search_fptshop, search_thegioididong, search_vienthonga, mer
 # oput3 = search_vienthonga("iphone")
 # data = merge_data([oput, oput2, oput3])
 # print(oput2)
-get_product_fptshop("https://fptshop.com.vn/dien-thoai/samsung-galaxy-s9-plus")
+# print(get_product_fptshop("https://fptshop.com/dien-thoai/vsmart-joy-1-plus-2gb-16gb"))
+print(get_product_theogioididong("https://thegiodidong.com/dtdd/iphone-8-plus"))
+# print(get_product_vienthonga("https://vienthonga.vn/samsung-galaxy-s10plus.html?cn=VINPRO+"))

@@ -50,13 +50,12 @@ def get_product_theogioididong(link):
         code = req.get(url, headers=header)
         plain_text = code.text
         html_text = BeautifulSoup(plain_text)
-
+        # print("run tgdd", html_text)
         product_name = html_text.body.find('h1').text.strip()
-        product_first_price = get_only_digit(
-            html_text.body.find('span', 'hisprice').text)
         product_real_price = get_only_digit(html_text.body.find(
             'div', 'area_price').find('strong').text.strip())
-        product_discount = product_real_price * 100 / product_first_price
+        product_first_price = get_only_digit(html_text.body.find('span', 'hisprice').text) if html_text.body.find('span', 'hisprice') is not None else product_real_price
+        product_discount = 100 - float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'ul', 'parameter').text.strip()
         product_rate = html_text.body.find('div', 'lcrt').get('data-gpa')
@@ -83,14 +82,14 @@ def get_product_fptshop(link):
         code = req.get(url, headers=header)
         plain_text = code.text
         html_text = BeautifulSoup(plain_text)
-        print(html_text)
+        # print("run", html_text)
         product_name = html_text.body.find('h1', 'fs-dttname').find(text=True)
         product_first_price = get_only_digit(html_text.body.find(
             'p', 'fs-dtprice').find('del').text if html_text.body.find(
             'p', 'fs-dtprice').find('del') else "")
         product_real_price = get_only_digit(html_text.body.find(
             'p', 'fs-dtprice').find(text=True))
-        product_discount = product_real_price * 100 / product_first_price
+        product_discount = 100 - float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'div', 'fs-tsright').text.strip()
         product_rate = html_text.body.find('div', 'fs-dtrt-c1').find('h5').text
@@ -104,6 +103,7 @@ def get_product_fptshop(link):
         }
         return(output)
     except req.exceptions.SSLError as e:
+        # print("except")
         return
 
 
@@ -118,14 +118,12 @@ def get_product_vienthonga(link):
         code = req.get(url, headers=header)
         plain_text = code.text
         html_text = BeautifulSoup(plain_text)
-
+        # print("run vta", html_text)
         product_name = html_text.body.find('h1', 'name').find(text=True)
-        product_first_price = get_only_digit(html_text.body.find(
-            'p', 'fs-dtprice').find('del').text if html_text.body.find(
-            'p', 'fs-dtprice').find('del') else "")
         product_real_price = get_only_digit(html_text.body.find(
             'div', 'detail-price').find(text=True))
-        product_discount = product_real_price * 100 / product_first_price
+        product_first_price = product_real_price
+        product_discount = 100 - float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'table', 'tablet').text.strip()
         product_rate = '0/5'
@@ -201,7 +199,7 @@ def search_thegioididong(keyword):
     if (html_text.body.find('ul', 'listsearch') is not None):
         products_blocks = html_text.body.find(
             'ul', 'listsearch').findAll('li')
-        while (html_text.body.find('a', 'viewmore') is not None):
+        while (html_text.body.find('aside','left_search').find('a', 'viewmore') is not None):
             page += 1
             if page == 5:
                 break
