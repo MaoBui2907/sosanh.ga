@@ -3,51 +3,139 @@
 {% block head%}
 
 {{ super() }}
-<style>
-	a.list-group-item {
-		height: auto;
-		min-height: 220px;
-	}
+{% include "styledssp.html" %}
 
-	a.list-group-item.active small {
-		color: #fff;
-	}
-
-	.stars {
-		margin: 20px auto 1px;
-	}
-</style>
 {% endblock %}
 
 {% block content %}
 {% include "header.html" %}
-<div class="container" style="margin-top: 90px">
+<div class="container-fluid" style="margin-top:150px">
+	<p class="name-product">Điện thoại Samsung Galaxy A70</p>
+
 	<div class="row">
-		<div class="col-12 row w-100">
-			<div class="card">
-				<div class="card-body row">
-					<div class="col-md-6 col-sm-12">
-						<img src="{{image}}" width="120px" />
-					</div>
-					<div class="col-md-6 col-sm-12">
-						<h4>{{ name }}</h4>
-						<div>
-							{{shops[0]["Mô tả ngắn"]}}
+
+		<!--Grid column-->
+		<div class="col-md-6 col-sm-12 mb-4">
+			<img src="../static/img/sp.png" class="img-fluid" alt="">
+		</div>
+		<!--Grid column-->
+
+		<!--Grid column-->
+		<div class="col-md-6 mb-4">
+			<!--Content-->
+				<!-- <p class="lead font-weight-bold">Điện thoại Iphone 8</p> -->
+			<p>Màn hình :	6.2", 2K (1440 x 2960 Pixels)</p> 
+			<p>Camera trước :	8 MP</p>
+			<p>Camera sau :	2 camera 12 MP</p>
+			<p>RAM :	6 GB</p>
+			<p>Bộ nhớ trong :	64 GB</p>
+			<p>CPU :	Exynos 9810 8 nhân 64 bit, 4 nhân 2.8 GHz & 4 nhân 1.7 GHz, 4 nhân 2.8 GHz & 4 nhân 1.7 GHz</p>				
+			<p>GPU :	Mali-G72 MP18</p>
+			<p>Dung lượng pin :	3500 mAh</p>
+			<p>Hệ điều hành :	Android 8.0</p>
+			<div class="text-best">Giá tốt nhất tại: FPT</div><br><br>
+			<input class="btn-goshop-best" type="button" value="Đến nơi bán">
+		</div>
+			<!--Content-->
+		<!--Grid column-->
+
+	</div>
+
+	<p class="compare">SO SÁNH GIÁ</p>
+	<!-- nơi bán 1 -->
+		<div class="box-info">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="logo-supplier" src="../static/img/logo-fpt.png" alt="placehold.it/350x250">
+				</div>
+				<div class="col-md-3 text-rating">
+					<h4 class="list-group-item-heading"> </h4>
+						<!-- <p class="list-group-item-text">
+						</p> -->
+					Đánh giá: 	<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span><br>
+					<div class="product">
+						<div class="price">
+							12.990.000đ&nbsp;
+							<span>14.000.000đ</span>
 						</div>
-					</div>
+					</div>	
+				</div>
+				<div class="col-md-2">
+					<img class="img-phone" src="../static/img/dienthoai.jpg" alt="placehold.it/350x250">
+				</div>
+				<div class="col-md-3">
+					<input class="btn-goshop" type="button" value="Đến nơi bán">
 				</div>
 			</div>
 		</div>
-
-	</div>
-
-	<div class="row">
-
-	</div>
+		
+		<!-- nơi bán 2 -->
+		<div class="box-info">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="logo-supplier" src="../static/img/logo_tgdd.png" alt="placehold.it/350x250">
+				</div>
+				<div class="col-md-3 text-rating">
+					<h4 class="list-group-item-heading"> </h4>
+						<!-- <p class="list-group-item-text">
+						</p> -->
+					Đánh giá: 	<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span><br>
+					<div class="product">
+						<div class="price">
+							12.990.000đ&nbsp;
+							<span>14.000.000đ</span>
+						</div>
+					</div>	
+				</div>
+				<div class="col-md-2">
+					<img class="img-phone" src="../static/img/dienthoai.jpg" alt="placehold.it/350x250">
+				</div>
+				<div class="col-md-3">
+					<input class="btn-goshop" type="button" value="Đến nơi bán">
+				</div>
+			</div>
+		</div>
+	<!-- nơi bán 3 -->
+	<div class="box-info">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="logo-supplier" src="../static/img/logo-vta.png" alt="placehold.it/350x250">
+			</div>
+			<div class="col-md-3 text-rating">
+				<h4 class="list-group-item-heading"> </h4>
+					<!-- <p class="list-group-item-text">
+					</p> -->
+				Đánh giá: 	<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span><br>
+				<div class="product">
+					<div class="price">
+						12.990.000đ&nbsp;
+						<span>14.000.000đ</span>
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-2">
+				<img class="img-phone" src="../static/img/dienthoai.jpg" alt="placehold.it/350x250">
+			</div>
+			<div class="col-md-3">
+				<input class="btn-goshop" type="button" value="Đến nơi bán">
+			</div>
+		</div>
+	</div>		
 </div>
 
 {% endblock %}
-
 {% block script %}
 {{ super() }}
 <script>
