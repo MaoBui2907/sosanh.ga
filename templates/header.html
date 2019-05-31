@@ -1,9 +1,41 @@
+<style>
+    .btn_search{
+        width: 70px;
+        height: 40px;
+        background-color:#cccccc;
+    }
+    .btn_search:hover{
+        background-color: dodgerblue;
+    }
+</style>
+
 <nav class="navbar navbar-dark fixed-top justify-content-between" style="background-color: #373A48">
     <a class="navbar-brand" href="/">
         <img src="{{ url_for('static', filename='img/logo.PNG') }}" height="50" alt="" style="margin: 0px auto" >
     </a>
-    <form class="form-inline" method="GET" action="/timkiem">
-        <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="Bạn cần tìm sản phẩm gì?" aria-label="Search">
-        <a class="btn btn-outline-success my-2 my-sm-0" style="color:azure" type="submit">Tìm kiếm</a>
-    </form>
+     
+        <!-- <form class="form-inline" method="GET" action="/timkiem">
+            <div class="input-group"></div>
+                <input class="form-control mr-sm-2" type="search" name="keyword" placeholder="Bạn cần tìm sản phẩm gì?" aria-label="Search">
+                <a class="btn btn-outline-success my-2 my-sm-0" style="color:azure" type="submit">Tìm kiếm</a>
+            </div>
+        </form>        -->
+
+
+    <div class="col-sm-3 col-md-4">
+        <form class="navbar-form" role="search" method="GET" action="/timkiem">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Bạn cần tìm gì?" name="keyword">
+                    <div class="input-group-btn">
+                        <button class="btn_search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+            </div>
+        </form>
+    </div>
 </nav>
+
+
+
+    
+
+    
