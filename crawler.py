@@ -2,13 +2,6 @@
 import requests as req
 from bs4 import BeautifulSoup
 import time
-# test set
-
-proxies = {
-    # 'http': '211.24.105.248:49346',
-    'http': 'sosanh.ga:3128'
-}
-
 
 def get_only_digit(text):
     """Return digit from string"""
@@ -25,7 +18,6 @@ def check_duplicate_product(datas, item):
     for i in datas:
         if check_same_product(i['name'], item['name']):
             return True
-
     return False
 
 
@@ -34,130 +26,133 @@ def sort_data_list(data, reverse=False):
     return sorted(data, key=lambda k: k['price'], reverse=reverse)
 
 
-# def get_product(site, link):
-#     """"Lấy thông tin sản phẩm với các site khác nhau"""
-#     if (site == "thegioididong"):
-#         return get_product_theogioididong(link)
-#     elif (site == "fptshop"):
-#         return get_product_fptshop(link)
-#     elif (site == "vienthonga"):
-#         return get_product_vienthonga(link)
-#     return(0)
+def get_product(site, link):
+    """"Lấy thông tin sản phẩm với các site khác nhau"""
+    if (site == "thegioididong"):
+        return get_product_theogioididong(link)
+    elif (site == "fptshop"):
+        return get_product_fptshop(link)
+    elif (site == "vienthonga"):
+        return get_product_vienthonga(link)
+    return(0)
 
 
-# def get_product_theogioididong(link):
-#     """Lấy thông tin từ trang thế giới di động"""
-#     url = link.rstrip()
-#     header = {
-#         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
-#     # try:
-#     time.sleep(3)
-#     s = req.Session()
-#     s.proxies = proxies
-#     code = s.get(url, headers=header)
-#     plain_text = code.text
-#     html_text = BeautifulSoup(plain_text)
-#     print("run tgdd", html_text)
-#     product_name = html_text.body.find('h1').text.strip()
-#     product_real_price = get_only_digit(html_text.body.find(
-#         'div', 'area_price').find('strong').text.strip())
-#     product_first_price = get_only_digit(html_text.body.find('span', 'hisprice').text) if html_text.body.find(
-#         'span', 'hisprice') is not None else product_real_price
-#     product_discount = 100 - \
-#         float(product_real_price) * 100 / float(product_first_price)
-#     product_short_description = html_text.body.find(
-#         'ul', 'parameter').text.strip()
-#     product_rate = html_text.body.find('div', 'lcrt').get('data-gpa')
-#     output = {
-#         "Tên sản phẩm": product_name,
-#         "Giá gốc": product_first_price,
-#         "Giá bán": product_real_price,
-#         "Giảm giá": product_discount,
-#         "Mô tả ngắn": product_short_description,
-#         "Đánh giá": product_rate
-#     }
-#     return(output)
-#     # except req.exceptions.SSLError as e:
-#     #     return
+def get_product_theogioididong(link):
+    """Lấy thông tin từ trang thế giới di động"""
+    url = link.rstrip()
+    header = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
+    try:
+        time.sleep(3)
+        s = req.Session()
+        code = s.get(url, headers=header)
+        plain_text = code.text
+        html_text = BeautifulSoup(plain_text)
+        product_name = html_text.body.find('h1').text.strip()
+        if html_text.body.find('div', 'area_price').find("strong"):
+            product_real_price = get_only_digit(html_text.body.find(
+                'div', 'area_price').find('strong').text.strip())
+        else:
+            product_real_price = get_only_digit(html_text.body.find('a', 
+            attrs={ 'class','item i1 active'}).find('strong').text.strip())
+
+        product_first_price = get_only_digit(html_text.body.find('span', 'hisprice').text) if html_text.body.find(
+            'span', 'hisprice') is not None else product_real_price
+        product_discount = 100 - \
+            float(product_real_price) * 100 / float(product_first_price)
+        product_short_description = html_text.body.find(
+            'ul', 'parameter')
+        product_rate = round(float(html_text.body.find('div', 'lcrt').get('data-gpa')))
+        output = {
+            "Tên sản phẩm": product_name,
+            "Giá gốc": product_first_price,
+            "Giá bán": product_real_price,
+            "Giảm giá": product_discount,
+            "Mô tả ngắn": product_short_description,
+            "Đánh giá": product_rate
+        }
+        return(output)
+    except req.exceptions.SSLError as e:
+        return e
 
 
-# def get_product_fptshop(link):
-#     """Lấy thông tin từ trang fpt shop"""
-#     url = link.rstrip()
-#     header = {
-#         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
-#     try:
-#         time.sleep(4)
-#         s = req.Session()
-#         s.proxies = proxies
-#         code = s.get(url, headers=header)
-#         plain_text = code.text
-#         html_text = BeautifulSoup(plain_text)
-#         # print("run", html_text)
-#         product_name = html_text.body.find('h1', 'fs-dttname').find(text=True)
-#         product_first_price = get_only_digit(html_text.body.find(
-#             'p', 'fs-dtprice').find('del').text if html_text.body.find(
-#             'p', 'fs-dtprice').find('del') else "")
-#         product_real_price = get_only_digit(html_text.body.find(
-#             'p', 'fs-dtprice').find(text=True))
-#         product_discount = 100 - \
-#             float(product_real_price) * 100 / float(product_first_price)
-#         product_short_description = html_text.body.find(
-#             'div', 'fs-tsright').text.strip()
-#         product_rate = html_text.body.find('div', 'fs-dtrt-c1').find('h5').text
-#         output = {
-#             "Tên sản phẩm": product_name,
-#             "Giá gốc": product_first_price,
-#             "Giá bán": product_real_price,
-#             "Giảm giá": product_discount,
-#             "Mô tả ngắn": product_short_description,
-#             "Đánh giá": product_rate
-#         }
-#         return(output)
-#     except req.exceptions.SSLError as e:
-#         # print("except")
-#         return
+def get_product_fptshop(link):
+    """Lấy thông tin từ trang fpt shop"""
+    url = link.rstrip()
+    header = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
+    try:
+        time.sleep(4)
+        s = req.Session()
+        code = s.get(url, headers=header)
+        plain_text = code.text
+        html_text = BeautifulSoup(plain_text)
+        product_name = html_text.body.find('h1', 'fs-dttname').find(text=True)
+        
+        product_real_price = get_only_digit(html_text.body.find(
+            'p', 'fs-dtprice').find(text=True))
+        product_first_price = get_only_digit(html_text.body.find(
+            'p', 'fs-dtprice').find('del').text) if html_text.body.find(
+            'p', 'fs-dtprice').find('del') else product_real_price
+
+        product_discount = 100 - \
+            float(product_real_price) * 100 / float(product_first_price)
+        product_short_description = html_text.body.find(
+            'div', 'fs-tsright')
+        product_rate = get_only_digit(html_text.body.find('div', 'fs-dtrt-c1').find('h5').text)[:-1]
+        if(len(product_rate) == 2):
+            product_rate = float(product_rate) / 10
+        product_rate = round(float(product_rate))
+        output = {
+            "Tên sản phẩm": product_name,
+            "Giá gốc": product_first_price,
+            "Giá bán": product_real_price,
+            "Giảm giá": product_discount,
+            "Mô tả ngắn": product_short_description,
+            "Đánh giá": product_rate
+        }
+        return(output)
+    except req.exceptions.SSLError as e:
+        return e
 
 
-# def get_product_vienthonga(link):
-#     """thông tin sản phẩm viễn thông A"""
-#     url = link.rstrip()
-#     header = {
-#         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
+def get_product_vienthonga(link):
+    """thông tin sản phẩm viễn thông A"""
+    url = link.rstrip()
+    header = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36'}
 
-#     try:
-#         time.sleep(4)
-#         s = req.Session()
-#         s.proxies = proxies
-#         code = s.get(url, headers=header)
-#         plain_text = code.text
-#         html_text = BeautifulSoup(plain_text)
-#         # print("run vta", html_text)
-#         product_name = html_text.body.find('h1', 'name').find(text=True)
-#         product_real_price = get_only_digit(html_text.body.find(
-#             'div', 'detail-price').find(text=True))
-#         product_first_price = product_real_price
-#         product_discount = 100 - \
-#             float(product_real_price) * 100 / float(product_first_price)
-#         product_short_description = html_text.body.find(
-#             'table', 'tablet').text.strip()
-#         product_rate = '0/5'
-#         output = {
-#             "Tên sản phẩm": product_name,
-#             "Giá gốc": product_first_price,
-#             "Giá bán": product_real_price,
-#             "Giảm giá": product_discount,
-#             "Mô tả ngắn": product_short_description,
-#             "Đánh giá": product_rate
-#         }
-#         return(output)
-#     except req.exceptions.SSLError as e:
-#         return
+    try:
+        time.sleep(4)
+        s = req.Session()
+        code = s.get(url, headers=header)
+        plain_text = code.text
+        html_text = BeautifulSoup(plain_text)
+        product_name = html_text.body.find('h1', 'name').find(text=True)
+        product_real_price = get_only_digit(html_text.body.find(
+            'div', 'detail-price').find(text=True))
+        product_first_price = product_real_price
+        product_discount = 100 - \
+            float(product_real_price) * 100 / float(product_first_price)
+        product_short_description = html_text.body.find(
+            'table', 'tablet')
+        product_rate = 0
+        output = {
+            "Tên sản phẩm": product_name,
+            "Giá gốc": product_first_price,
+            "Giá bán": product_real_price,
+            "Giảm giá": product_discount,
+            "Mô tả ngắn": product_short_description,
+            "Đánh giá": product_rate
+        }
+        return(output)
+    except req.exceptions.SSLError as e:
+        return e
 
 
-# def get_product_info(link):
-#     """return"""
-#     pass
+def get_product_info(link):
+    """return"""
+    pass
 
 
 def merge_compare(datas, product, site):
@@ -168,6 +163,7 @@ def merge_compare(datas, product, site):
             i['compare'].append({
                 'site': site,
                 'price': product['price'],
+                'image': product['image'],
                 'delprice': product['delprice'],
                 'decription': product['decription'],
                 'link': product['link']
@@ -183,10 +179,11 @@ def merge_data(datas):
             if not check_duplicate_product(ouput_list, product):
                 ouput_list.append({
                     'name': product['name'],
-                    'image': product['image'],
+                   'image': product['image'],
                     'compare': [{
                         'site': store,
                         'price': product['price'],
+                        'image': product['image'],
                         'delprice': product['delprice'],
                         'decription': product['decription'],
                         'link': product['link']
@@ -230,10 +227,9 @@ def search_thegioididong(keyword):
                      'price': get_only_digit(i.find('strong').find(text=True)),
                      'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
                      'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
-                     'link': 'https://thegiodidong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
-        print(type(products[0]['decription']))
+                     'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
     ouput_data = {
-        "site": "thegiodidong",
+        "site": "thegioididong",
         "products": products
     }
 
@@ -261,7 +257,7 @@ def search_fptshop(keyword):
                      'price': get_only_digit(i.find('p', 'fs-icpri').find(text=True)) if i.find('p', 'fs-icpri') is not None else '',
                      'delprice': (get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
                      'decription': "",
-                     'link': 'https://fptshop.com' + i.find('a')['href']} for i in products_blocks]
+                     'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks]
     ouput_data = {
         "site": "fptshop",
         "products": products

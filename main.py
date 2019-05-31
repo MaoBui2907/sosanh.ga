@@ -5,7 +5,7 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from flask import redirect
-from crawler import search_fptshop, search_thegioididong, search_vienthonga, merge_data
+from crawler import search_fptshop, search_thegioididong, search_vienthonga, merge_data, get_product
 app = Flask(__name__)
 
 
@@ -46,7 +46,11 @@ def product():
         name = data['name']
         image = data['image']
         compare = data['compare']
-        return render_template('product.html', title=name + ' | So sánh', image=image, name=name, compare=compare)
+        shops = []
+        for i in compare:
+            shops.append(get_product(i['site'], i['link']))
+        print(shops)
+        return render_template('product.html', title=name + ' | So sánh', image=image, name=name, compare=compare, shops=shops)
 
 if __name__ == "__main__":
     # Only for debugging while developing
