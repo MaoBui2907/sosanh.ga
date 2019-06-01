@@ -57,17 +57,20 @@ def get_product_theogioididong(link):
             attrs={ 'class','item i1 active'}).find('strong').text.strip())
 
         product_first_price = get_only_digit(html_text.body.find('span', 'hisprice').text) if html_text.body.find(
-            'span', 'hisprice') is not None else product_real_price
+            'span', 'hisprice') is not None and html_text.body.find(
+            'span', 'hisprice').text  else product_real_price
         product_discount = 100 - \
             float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'ul', 'parameter')
-        product_short_description.find("div", "ibsim").extract()
+        print(product_short_description)
+        if product_short_description.find('div', "ibsim"):
+            product_short_description.find("div", "ibsim").extract() 
         for tag in product_short_description.findAll('div'):
             tag.unwrap() 
         for a in product_short_description.findAll('a'):
             a.unwrap()
-        product_rate = round(float(html_text.body.find('div', 'lcrt').get('data-gpa')))
+        product_rate = round(float(html_text.body.find('div', 'lcrt').get('data-gpa'))) if html_text.body.find('div', 'lcrt') is not None else 0
         output = {
             "Tên sản phẩm": product_name,
             "Giá gốc": product_first_price,
@@ -110,7 +113,7 @@ def get_product_fptshop(link):
             float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'div', 'fs-tsright').find('ul')
-        product_rate = get_only_digit(html_text.body.find('div', 'fs-dtrt-c1').find('h5').text)[:-1]
+        product_rate = get_only_digit(html_text.body.find('div', 'fs-dtrt-c1').find('h5').text)[:-1] if html_text.body.find('div', 'fs-dtrt-c1') is not None else "0"
         if(len(product_rate) == 2):
             product_rate = float(product_rate) / 10
         product_rate = round(float(product_rate))
@@ -234,7 +237,7 @@ def search_thegioididong(keyword):
     html_text = BeautifulSoup(plain_text)
     products = []
     page = 1
-
+    # print(html_text)
     try:
         if (html_text.body.find('ul', 'listsearch') is not None):
             products_blocks = html_text.body.find(
@@ -243,20 +246,46 @@ def search_thegioididong(keyword):
                 page += 1
                 if page == 5:
                     break
-                viewmore = req.post('https://www.thegioididong.com/aj/SearchV2/LoadMoreProductResult',
-                                    data={'keyword': keyword, 'pageIndex': page, 'orderby': 0})
-                more = BeautifulSoup(viewmore.text)
-                if more.find('ul', 'listsearch') is not None:
-                    more_product = more.find('ul', 'listsearch').findAll('li') 
-                    products_blocks.extend(more_product)
+                try:
+                    viewmore = req.post('https://www.thegioididong.com/aj/SearchV2/LoadMoreProductResult',
+                                        data={'keyword': keyword, 'pageIndex': page, 'orderby': 0})
+                    more = BeautifulSoup(viewmore.text)
+                    if more.find('ul', 'listsearch') is not None:
+                        more_product = more.find('ul', 'listsearch').findAll('li') 
+                        products_blocks.extend(more_product)
+                except:
+                    pass
 
             products = [{'name': i.find('h3').text, 'image': i.find('img')['src'],
                         'price': get_only_digit(i.find('strong').find(text=True)),
                         'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
                         'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
                         'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
-       
-    except:
+        elif (html_text.body.find('ul', 'cate') is not None):
+            products_blocks = html_text.body.find(
+                'ul', 'cate').findAll('li')
+            print(products_blocks)
+            while (html_text.body.find('section').find('a', 'viewmore') is not None):
+                page += 1
+                if page == 5:
+                    break
+                try:
+                    viewmore = req.post('https://www.thegioididong.com/aj/SearchV2/LoadMoreProductResult',
+                                        data={'keyword': keyword, 'pageIndex': page, 'orderby': 0})
+                    more = BeautifulSoup(viewmore.text)
+                    if more.find('ul', 'cate') is not None:
+                        more_product = more.find('ul', 'cate').findAll('li') 
+                        products_blocks.extend(more_product)
+                except:
+                    pass
+
+            products = [{'name': i.find('h3').text, 'image': i.find('img')['src'],
+                        'price': get_only_digit(i.find('strong').find(text=True)),
+                        'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
+                        'decription': "",
+                        'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
+        
+    except ValueError:
         pass
 
     ouput_data = {
@@ -286,7 +315,7 @@ def search_fptshop(keyword):
                         'price': get_only_digit(i.find('p', 'fs-icpri').find(text=True)) if i.find('p', 'fs-icpri') is not None else '',
                         'delprice': (get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
                         'decription': "",
-                        'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks]
+                        'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks if i.find('p', 'fs-icpri') is not None and i.find('p', 'fs-icpri').find(text=True) is not None]
     except:
         pass
     ouput_data = {
@@ -343,7 +372,7 @@ def search_vienthonga(keyword):
                         'price': get_only_digit(i.find('div', 'price-1').find(text=True)) if i.find('div', 'price-1') is not None else '',
                         'delprice': '',
                         'decription': i.find('div', attrs={'itemprop', 'description'}) if i.find('div', attrs={'itemprop', 'description'}) is not None else "",
-                        'link': 'https://vienthonga.vn'+i.find('div', 'product-image').find('a')['href']} for i in products_blocks]
+                        'link': 'https://vienthonga.vn'+i.find('div', 'product-image').find('a')['href']} for i in products_blocks if i.find('div', 'price-1') is not None and i.find('div', 'price-1').find(text=True) is not None]
 
     except:
         pass

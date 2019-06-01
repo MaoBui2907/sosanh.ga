@@ -1,373 +1,291 @@
-{
-  "site": "thegioididong",
-  "products": [
-    {
-      "name": "iPhone 7 Plus 32GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/78124/iphone-7-plus-16-200x200.jpg",
-      "price": "12990000",
-      "delprice": "13990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone 7 Plus 32GB</h3>\n                        <strong>12.990.000₫</strong>\n                        <span>Màn hình: 5.5\", Retina HD</span><span>HĐH: iOS 12</span><span>CPU: Apple A10 Fusion 4 nhân 64-bit</span><span>RAM: 3 GB, ROM: 32 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 2900 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-7-plus"
-    },
-    {
-      "name": "iPhone X 64GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-16-4-200x200.jpg",
-      "price": "20990000",
-      "delprice": "22990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone X 64GB</h3>\n                        <strong>21.990.000₫</strong>\n                        <span>Màn hình: 5.8\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A11 Bionic 6 nhân</span><span>RAM: 3 GB, ROM: 64 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 2716 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-x-64gb"
-    },
-    {
-      "name": "iPhone 6s Plus 32GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/87846/iphone-6s-plus-32gb-200x200.jpg",
-      "price": "8990000",
-      "delprice": "9990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone 6s Plus 32GB</h3>\n                        <strong>9.990.000₫</strong>\n                        <span>Màn hình: 5.5\", Retina HD</span><span>HĐH: iOS 12</span><span>CPU: Apple A9 2 nhân 64-bit</span><span>RAM: 2 GB, ROM: 32 GB</span><span>Camera: 12 MP, Selfie: 5 MP</span><span>PIN: 2750 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-6s-plus-32gb"
-    },
-    {
-      "name": "iPhone 8 Plus 64GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/114110/iphone-8-plus-hh-200x200.jpg",
-      "price": "18990000",
-      "delprice": "19990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone 8 Plus 64GB</h3>\n                        <strong>18.990.000₫</strong>\n                        <span>Màn hình: 5.5\", Retina HD</span><span>HĐH: iOS 12</span><span>CPU: Apple A11 Bionic 6 nhân</span><span>RAM: 3 GB, ROM: 64 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 2691 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-8-plus"
-    },
-    {
-      "name": "iPhone 7 32GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/74110/iphone-7-gold-200x200.jpg",
-      "price": "11990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone 7 32GB</h3>\n                        <strong>11.990.000₫</strong>\n                        <span>Màn hình: 4.7\", Retina HD</span><span>HĐH: iOS 12</span><span>CPU: Apple A10 Fusion 4 nhân 64-bit</span><span>RAM: 2 GB, ROM: 32 GB</span><span>Camera: 12 MP, Selfie: 7 MP</span><span>PIN: 1960 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-7"
-    },
-    {
-      "name": "iPhone Xs Max 64GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/190321/iphone-xs-max-gray-200x200.jpg",
-      "price": "29990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone Xs Max 64GB</h3>\n                        <strong>29.990.000₫</strong>\n                        <span>Màn hình: 6.5\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 4 GB, ROM: 64 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 3174 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xs-max"
-    },
-    {
-      "name": "iPhone XR 64GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/190325/iphone-xr-black-200x200.jpg",
-      "price": "17990000",
-      "delprice": "19990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone XR 64GB</h3>\n                        <strong>17.990.000₫</strong>\n                        <span>Màn hình: 6.1\", Liquid Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 3 GB, ROM: 64 GB</span><span>Camera: 12 MP, Selfie: 7 MP</span><span>PIN: 2942 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xr"
-    },
-    {
-      "name": "iPhone Xs 64GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/190323/iphone-xs-gold-200x200.jpg",
-      "price": "26990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone Xs 64GB</h3>\n                        <strong>26.990.000₫</strong>\n                        <span>Màn hình: 5.8\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 4 GB, ROM: 64 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 2658 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xs"
-    },
-    {
-      "name": "iPhone Xs Max 512GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/191482/iphone-xs-max-512gb-gold-200x200.jpg",
-      "price": "39990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone Xs Max 512GB</h3>\n                        <strong>39.990.000₫</strong>\n                        <span>Màn hình: 6.5\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 4 GB, ROM: 512 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 3174 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xs-max-512gb"
-    },
-    {
-      "name": "iPhone Xs Max 256GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/190322/iphone-xs-max-256gb-white-200x200.jpg",
-      "price": "35990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone Xs Max 256GB</h3>\n                        <strong>35.990.000₫</strong>\n                        <span>Màn hình: 6.5\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 4 GB, ROM: 256 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 3174 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xs-max-256gb"
-    },
-    {
-      "name": "iPhone X 256GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/114111/iphone-x-256gb-a1-200x200.jpg",
-      "price": "27990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone X 256GB</h3>\n                        <strong>27.990.000₫</strong>\n                        <span>Màn hình: 5.8\", Super Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A11 Bionic 6 nhân</span><span>RAM: 3 GB, ROM: 256 GB</span><span>Camera: Chính 12 MP &amp; Phụ 12 MP, Selfie: 7 MP</span><span>PIN: 2716 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-x-256gb"
-    },
-    {
-      "name": "iPhone Xr 128GB",
-      "image": "https://cdn.tgdd.vn/Products/Images/42/191483/iphone-xr-128gb-red-200x200.jpg",
-      "price": "21990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPhone Xr 128GB</h3>\n                        <strong>21.990.000₫</strong>\n                        <span>Màn hình: 6.1\", Liquid Retina</span><span>HĐH: iOS 12</span><span>CPU: Apple A12 Bionic 6 nhân</span><span>RAM: 3 GB, ROM: 128 GB</span><span>Camera: 12 MP, Selfie: 7 MP</span><span>PIN: 2942 mAh</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dtdd/iphone-xr-128gb"
-    },
-    {
-      "name": "Colmi CY7",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/202056/dong-ho-thong-minh-colmi-cy7-den-200x200.jpg",
-      "price": "790000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Colmi CY7</h3>\n                        <strong>790.000₫</strong>\n                        <span>Công nghệ màn hình: TFT</span><span>Kích thước màn hình: 1.3 inch</span><span>Thời gian sử dụng pin: Khoảng 5 ngày</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: IP67</span><span>Chất liệu mặt: Mặt kính thường</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/dong-ho-thong-minh-colmi-cy7-den"
-    },
-    {
-      "name": "Sinophy Sport B12",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/197016/vong-tay-thong-minh-sinophy-sport-b12-xanh-600x600-200x200.jpg",
-      "price": "170000",
-      "delprice": "250000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Sinophy Sport B12</h3>\n                        <strong>170.000₫</strong>\n                        <span>Công nghệ màn hình: LCD</span><span>Kích thước màn hình: 0.96 inch</span><span>Thời gian sử dụng: Khoảng 3 ngày</span><span>Chống nước: IP67</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/sinophy-sport-b12"
-    },
-    {
-      "name": "Huawei Watch GT Active Edition",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/200594/huawei-watch-gt-xanh-la-cay-200x200.jpg",
-      "price": "4990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Huawei Watch GT Active Edition</h3>\n                        <strong>4.990.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 1.39 inch</span><span>Thời gian sử dụng: Khoảng 14 ngày, Khoảng 22 giờ khi sử dụng GPS</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/huawei-watch-gt-xanh-la-cay"
-    },
-    {
-      "name": "Huawei Watch GT",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/197790/huawei-watch-gt-nt-200x200.jpg",
-      "price": "4690000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Huawei Watch GT</h3>\n                        <strong>4.690.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 1.39 inch</span><span>Thời gian sử dụng: Khoảng 14 ngày, Khoảng 22 giờ khi sử dụng GPS</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/huawei-watch-gt"
-    },
-    {
-      "name": "Fitbit Inspire HR",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/200838/vong-deo-thong-minh-fitbit-inspire-hr-200x200.png",
-      "price": "2690000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Fitbit Inspire HR</h3>\n                        <strong>2.690.000₫</strong>\n                        <span>Công nghệ màn hình: OLED</span><span>Kích thước màn hình: 1.57 inch</span><span>Thời gian sử dụng: Khoảng 5 ngày</span><span>Chống nước: 50m</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth v4.0</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/fitbit-inspire-hr"
-    },
-    {
-      "name": "Samsung Galaxy Watch Active",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/200965/samsung-galaxy-watch-active-r500-10-200x200.jpg",
-      "price": "5490000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Samsung Galaxy Watch Active</h3>\n                        <strong>5.490.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 1.1 inch</span><span>Thời gian sử dụng pin: Khoảng 5 ngày</span><span>Kết nối với hệ điều hành: iOS 10 trở lên, Android 5.0</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Gorilla Class 3</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/samsung-galaxy-watch-active-r500"
-    },
-    {
-      "name": "iPad Wifi 32GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/163645/ipad-wifi-32gb-2018-thumb-33397-123-123321-600x600-200x200.jpg",
-      "price": "7990000",
-      "delprice": "8990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Wifi 32GB (2018)</h3>\n                        <strong>7.990.000₫</strong>\n                        <span>Màn hình: 9.7\", LED backlit LCD</span><span>CPU: Apple A10 Fusion, iOS 12</span><span>RAM: 2 GB, Bộ nhớ: 32 GB</span><span>Camera: 8 MP, Selfie 1.2 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span><span>PIN: 32.4 Wh (Khoảng 8600 mAh), SIM: Không</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-wifi-32gb-2018"
-    },
-    {
-      "name": "Samsung Galaxy Watch 42mm",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/197085/samsung-galaxy-watch-42mm-nt-200x200.jpg",
-      "price": "6990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Samsung Galaxy Watch 42mm</h3>\n                        <strong>6.990.000₫</strong>\n                        <span>Công nghệ màn hình: SUPER AMOLED</span><span>Kích thước màn hình: 1.2 inch</span><span>Thời gian sử dụng pin: Khoảng 2 ngày</span><span>Kết nối với hệ điều hành: Android 5.0, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Gorilla Glass Dx+</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/samsung-galaxy-watch-42mm"
-    },
-    {
-      "name": "iPad Mini 7.9 inch Wifi 64GB 2019",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/202706/ipad-mini-79-inch-wifi-2019-1-200x200.jpg",
-      "price": "10990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Mini 7.9 inch Wifi 64GB 2019</h3>\n                        <strong>10.990.000₫</strong>\n                        <span>Màn hình: 7.9\", LED backlit LCD</span><span>CPU: Apple A12 Bionic 6 nhân, iOS 12</span><span>RAM: 3 GB, Bộ nhớ: 64 GB</span><span>Camera: 8 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-mini-79-inch-wifi-2019"
-    },
-    {
-      "name": "iPad Wifi 128 GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/163791/ipad-wifi-128-gb-2018-thumb-200x200.jpg",
-      "price": "9990000",
-      "delprice": "11490000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Wifi 128 GB (2018)</h3>\n                        <strong>10.490.000₫</strong>\n                        <span>Màn hình: 9.7\", LED backlit LCD</span><span>CPU: Apple A10 Fusion, iOS 12</span><span>RAM: 2 GB, Bộ nhớ: 128 GB</span><span>Camera: 8 MP, Selfie 1.2 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span><span>PIN: 32.4 Wh (Khoảng 8600 mAh), SIM: Không</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-wifi-128-gb-2018"
-    },
-    {
-      "name": "Apple Watch S4 GPS 40mm viền nhôm dây cao su",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194323/apple-watch-s4-gps-40mm-vien-nhom-mau-hong-nt-200x200.jpg",
-      "price": "11490000",
-      "delprice": "11990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Apple Watch S4 GPS 40mm viền nhôm dây cao su</h3>\n                        <strong>11.490.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 2.0 inch</span><span>Thời gian sử dụng pin: Khoảng 18 giờ</span><span>Kết nối với hệ điều hành: iOS 12 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Ion-X strengthened glass</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/apple-watch-s4-gps-40mm-vien-nhom-mau-hong"
-    },
-    {
-      "name": "Samsung Galaxy watch 46mm",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/197089/samsung-galaxy-watch-46mm-bac-nt-200x200.jpg",
-      "price": "7490000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Samsung Galaxy watch 46mm</h3>\n                        <strong>7.490.000₫</strong>\n                        <span>Công nghệ màn hình: SUPER AMOLED</span><span>Kích thước màn hình: 1.3 inch</span><span>Thời gian sử dụng pin: Khoảng 5 ngày</span><span>Kết nối với hệ điều hành: Android 5.0, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Gorilla Glass Dx+</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/samsung-galaxy-watch-46mm"
-    },
-    {
-      "name": "Mi Band 3",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/180028/mi-band-3-nt-200x200.jpg",
-      "price": "750000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Mi Band 3</h3>\n                        <strong>750.000₫</strong>\n                        <span>Công nghệ màn hình: OLED</span><span>Kích thước màn hình: 0.78 inch</span><span>Thời gian sử dụng: Khoảng 20 ngày</span><span>Chống nước: 50 m</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth v4.0</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/mi-band-3"
-    },
-    {
-      "name": "Xiaomi Amazfit Bip",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/162286/xiaomi-amazfit-bip-den-nt-200x200.jpg",
-      "price": "1800000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Xiaomi Amazfit Bip</h3>\n                        <strong>1.800.000₫</strong>\n                        <span>Công nghệ màn hình: Transflective LCD</span><span>Kích thước màn hình: 1.28 inch</span><span>Thời gian sử dụng: Khoảng 45 ngày, Khoảng 22 giờ khi sử dụng GPS</span><span>Kết nối với hệ điều hành: Android</span><span>Chống nước: IP68</span><span>Chất liệu mặt: Kính cường lực Gorilla Class 3</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/xiaomi-amazfit-bip-den"
-    },
-    {
-      "name": "iPad Mini 7.9 inch Wifi 64GB 2019",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/202706/ipad-mini-79-inch-wifi-2019-1-200x200.jpg",
-      "price": "10990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Mini 7.9 inch Wifi 64GB 2019</h3>\n                        <strong>10.990.000₫</strong>\n                        <span>Màn hình: 7.9\", LED backlit LCD</span><span>CPU: Apple A12 Bionic 6 nhân, iOS 12</span><span>RAM: 3 GB, Bộ nhớ: 64 GB</span><span>Camera: 8 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-mini-79-inch-wifi-2019"
-    },
-    {
-      "name": "iPad Wifi 128 GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/163791/ipad-wifi-128-gb-2018-thumb-200x200.jpg",
-      "price": "9990000",
-      "delprice": "11490000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Wifi 128 GB (2018)</h3>\n                        <strong>10.490.000₫</strong>\n                        <span>Màn hình: 9.7\", LED backlit LCD</span><span>CPU: Apple A10 Fusion, iOS 12</span><span>RAM: 2 GB, Bộ nhớ: 128 GB</span><span>Camera: 8 MP, Selfie 1.2 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span><span>PIN: 32.4 Wh (Khoảng 8600 mAh), SIM: Không</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-wifi-128-gb-2018"
-    },
-    {
-      "name": "Samsung Galaxy Fit e",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/203471/samsung-galaxy-fit-e-r375-1-200x200.jpg",
-      "price": "990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Samsung Galaxy Fit e</h3>\n                        <strong>990.000₫</strong>\n                        <span>Công nghệ màn hình: PMOLED</span><span>Kích thước màn hình: 0.74 inch</span><span>Thời gian sử dụng pin: Khoảng 7 ngày</span><span>Chống nước: 50m</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/samsung-galaxy-fit-e-r375"
-    },
-    {
-      "name": "Apple Watch S4 GPS 44mm viền nhôm dây cao su",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194392/apple-watch-s4-gps-44mm-vien-nhom-day-cao-su-den-nt-200x200.jpg",
-      "price": "12490000",
-      "delprice": "12990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Apple Watch S4 GPS 44mm viền nhôm dây cao su</h3>\n                        <strong>12.490.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 2.2 inch</span><span>Thời gian sử dụng: Khoảng 18 giờ</span><span>Kết nối với hệ điều hành: iOS 12 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Ion-X strengthened glass</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/apple-watch-s4-gps-44mm-vien-nhom-day-cao-su-den"
-    },
-    {
-      "name": "Xiaomi Amazfit Stratos 2",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194566/xiaomi-amazfit-stratos-nethumb-200x200.jpg",
-      "price": "3790000",
-      "delprice": "5290000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Xiaomi Amazfit Stratos 2</h3>\n                        <strong>3.790.000₫</strong>\n                        <span>Công nghệ màn hình: Transflective LCD</span><span>Kích thước màn hình: 1.34 inch</span><span>Thời gian sử dụng: Khoảng 5 ngày chế độ smartwatch. Khoảng 11 ngày chế độ thường</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Gorilla Glass 2.5D</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/xiaomi-amazfit-stratos-2"
-    },
-    {
-      "name": "Samsung Gear Fit2 Pro",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/147042/samsung-gear-fit2-pro-nt-1-200x200.jpg",
-      "price": "3290000",
-      "delprice": "3790000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Samsung Gear Fit2 Pro</h3>\n                        <strong>3.290.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 1.5 inch</span><span>Thời gian sử dụng pin: Khoảng 4 ngày</span><span>Chống nước: 50m</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth, Wifi</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/samsung-gear-fit2-pro"
-    },
-    {
-      "name": "iPad Air 10.5 inch Wifi 64GB 2019",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/202705/ipad-air-105-inch-wifi-2019-gold-200x200.jpg",
-      "price": "13990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Air 10.5 inch Wifi 64GB 2019</h3>\n                        <strong>13.990.000₫</strong>\n                        <span>Màn hình: 10.5\", LED backlit LCD</span><span>CPU: Apple A12 Bionic 6 nhân, iOS 12</span><span>RAM: 3 GB, Bộ nhớ: 64 GB</span><span>Camera: 8 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-air-105-inch-wifi-2019"
-    },
-    {
-      "name": "iPad Mini 7.9 inch Wifi Cellular 64GB (2019)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/202820/ipad-mini-79-inch-wifi-cellular-64gb-2019-gold-200x200.jpg",
-      "price": "14990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Mini 7.9 inch Wifi Cellular 64GB (2019)</h3>\n                        <strong>14.990.000₫</strong>\n                        <span>Màn hình: 7.9\", LED backlit LCD</span><span>CPU: Apple A12 Bionic 6 nhân, iOS 12</span><span>RAM: 3 GB, Bộ nhớ: 64 GB</span><span>Camera: 8 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, 3G, Hỗ trợ 4G</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-mini-79-inch-wifi-cellular-64gb-2019"
-    },
-    {
-      "name": "iPad Pro 10.5 inch Wifi 64GB (2017)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/106036/ipad-pro-105-inch-wifi-64gb-2017-6-200x200.jpg",
-      "price": "14990000",
-      "delprice": "16990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Pro 10.5 inch Wifi 64GB (2017)</h3>\n                        <strong>16.490.000₫</strong>\n                        <span>Màn hình: 10.5\", IPS LCD</span><span>CPU: Apple A10X 6 nhân 64-bit, iOS 12</span><span>RAM: 4 GB, Bộ nhớ: 64 GB</span><span>Camera: 12 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, Không hỗ trợ 3G, Không hỗ trợ 4G</span><span>PIN: 30.4 Wh, SIM: Không</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-pro-105-inch-wifi-64gb-2017"
-    },
-    {
-      "name": "iPad Pro 11 inch Wifi 64GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/195067/ipad-pro-11-inch-2018-64gb-wifi-33397-thumb-200x200.jpg",
-      "price": "21490000",
-      "delprice": "21990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Pro 11 inch Wifi 64GB (2018)</h3>\n                        <strong>21.490.000₫</strong>\n                        <span>Màn hình: 11\", Liquid Retina display</span><span>CPU: Apple A12X Bionic 64-bit, iOS 12</span><span>RAM: 4 GB, Bộ nhớ: 64 GB</span><span>Camera: 12 MP, Selfie 7 MP</span><span>Kết nối: Không 3G, Không hỗ trợ 4G</span><span>PIN: 30.4 Wh, SIM: Không</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-pro-11-inch-2018-64gb-wifi"
-    },
-    {
-      "name": "iPad Wifi Cellular 32GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/163793/ipad-wifi-cellular-32g-2018-thumb333-200x200.jpg",
-      "price": "10990000",
-      "delprice": "11990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Wifi Cellular 32GB (2018)</h3>\n                        <strong>10.990.000₫</strong>\n                        <span>Màn hình: 9.7\", LED backlit LCD</span><span>CPU: Apple A10 Fusion, iOS 12</span><span>RAM: 2 GB, Bộ nhớ: 32 GB</span><span>Camera: 8 MP, Selfie 1.2 MP</span><span>Kết nối mạng WiFi, 3G, 4G LTE</span><span>PIN: 32.4 Wh (Khoảng 8600 mAh), SIM: 1 SIM</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-wifi-cellular-32g-2018"
-    },
-    {
-      "name": "Apple Watch S4 GPS 44mm viền nhôm dây vải",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194338/apple-watch-s4-gps-44mm-vien-nhom-day-vai-hong-nt-200x200.jpg",
-      "price": "12490000",
-      "delprice": "12990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Apple Watch S4 GPS 44mm viền nhôm dây vải</h3>\n                        <strong>12.490.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 2.2 inch</span><span>Thời gian sử dụng pin: Khoảng 18 giờ</span><span>Kết nối với hệ điều hành: iOS 12 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Ion-X strengthened glass</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/apple-watch-s4-gps-44mm-vien-nhom-day-vai-hong"
-    },
-    {
-      "name": "Xiaomi Amazfit Stratos 2S",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/197202/xiaomi-amazfit-stratos-2s-nnt-200x200.jpg",
-      "price": "5190000",
-      "delprice": "6990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Xiaomi Amazfit Stratos 2S</h3>\n                        <strong>5.190.000₫</strong>\n                        <span>Công nghệ màn hình: Transflective LCD</span><span>Kích thước màn hình: 1.34 inch</span><span>Thời gian sử dụng: Khoảng 5 ngày chế độ smartwatch. Khoảng 11 ngày chế độ thường</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Saphire</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/xiaomi-amazfit-stratos-2s"
-    },
-    {
-      "name": "Xiaomi Amazfit Pace GPS",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/152584/xiaomi-amazfit-pace-gps-den-nt-200x200.jpg",
-      "price": "2400000",
-      "delprice": "3400000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Xiaomi Amazfit Pace GPS</h3>\n                        <strong>2.400.000₫</strong>\n                        <span>Công nghệ màn hình: Transflective LCD</span><span>Kích thước màn hình: 1.34 inch</span><span>Thời gian sử dụng: Khoảng 5 ngày, Khoảng 35 giờ khi sử dụng GPS</span><span>Kết nối với hệ điều hành: Android, iOS</span><span>Chống nước: IP67</span><span>Chất liệu mặt: Kính cường lực Gorilla Class 3</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/xiaomi-amazfit-pace-gps-den"
-    },
-    {
-      "name": "Huawei Watch 2",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/193447/huawei-watch-2-nt-200x200.jpg",
-      "price": "3990000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Huawei Watch 2</h3>\n                        <strong>3.990.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 1.2 inch</span><span>Thời gian sử dụng: Khoảng 2 ngày</span><span>Kết nối với hệ điều hành: Android 4.4 trở lên, iOS 9 trở lên</span><span>Chống nước: IP68</span><span>Chất liệu mặt: Kính cường lực Gorilla Class</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/huawei-watch-2"
-    },
-    {
-      "name": "Apple Watch S4 GPS 40mm viền nhôm dây vải",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194336/apple-watch-s4-gps-40mm-vien-nhom-xam-day-vai-den-nt-200x200.jpg",
-      "price": "11490000",
-      "delprice": "11990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Apple Watch S4 GPS 40mm viền nhôm dây vải</h3>\n                        <strong>11.490.000₫</strong>\n                        <span>Công nghệ màn hình: AMOLED</span><span>Kích thước màn hình: 2.0 inch</span><span>Thời gian sử dụng pin: Khoảng 18 giờ</span><span>Kết nối với hệ điều hành: iOS 12 trở lên</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Ion-X strengthened glass</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/apple-watch-s4-gps-40mm-vien-nhom-xam-day-vai-den"
-    },
-    {
-      "name": "Garmin Vivoactive 3 Đen",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/194552/dong-ho-thong-minh-garmin-vivoactive-3-den-200x200.jpg",
-      "price": "5890000",
-      "delprice": "",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Garmin Vivoactive 3 Đen</h3>\n                        <strong>5.890.000₫</strong>\n                        <span>Công nghệ màn hình: công nghệ MIP</span><span>Kích thước màn hình: 1.2 inch</span><span>Thời gian sử dụng: Khoảng 8 ngày, Khoảng 13 giờ khi sử dụng GPS</span><span>Kết nối với hệ điều hành: Android, iOS</span><span>Chống nước: 50m</span><span>Chất liệu mặt: Kính cường lực Gorilla Class 3</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/garmin-vivoactive-3-den"
-    },
-    {
-      "name": "iPad Wifi Cellular 128GB (2018)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/163813/ipad-wifi-cellular-128gb-2018-thumb-55-200x200.jpg",
-      "price": "13490000",
-      "delprice": "14490000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Wifi Cellular 128GB (2018)</h3>\n                        <strong>13.490.000₫</strong>\n                        <span>Màn hình: 9.7\", LED backlit LCD</span><span>CPU: Apple A10 Fusion, iOS 12</span><span>RAM: 2 GB, Bộ nhớ: 128 GB</span><span>Camera: 8 MP, Selfie 1.2 MP</span><span>Kết nối mạng WiFi, 3G, 4G LTE</span><span>PIN: 32.4 Wh (Khoảng 8600 mAh), SIM: 1 SIM</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-wifi-cellular-128gb-2018"
-    },
-    {
-      "name": "Fitbit Charge 3",
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/195167/fitbit-charge-3-den-nt-200x200.jpg",
-      "price": "3500000",
-      "delprice": "4090000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>Fitbit Charge 3</h3>\n                        <strong>3.500.000₫</strong>\n                        <span>Công nghệ màn hình: OLED cảm ứng</span><span>Kích thước màn hình: 1.57 inch</span><span>Thời gian sử dụng: Khoảng 7 ngày</span><span>Chống nước: 50m</span><span>Chất liệu dây: Silicone</span><span>Kết nối: Bluetooth v5.0</span>\n                    </figure>",
-      "link": "https://thegioididong.com/dong-ho-thong-minh/fitbit-charge-3-den"
-    },
-    {
-      "name": "iPad Pro 10.5 inch Wifi Cellular 64GB (2017)",
-      "image": "https://cdn.tgdd.vn/Products/Images/522/109599/ipad-pro-105-inch-wifi-cellular-64gb-2017-rose-gold-200x200.jpg",
-      "price": "19490000",
-      "delprice": "19990000",
-      "decription": "<figure class=\"bginfo\">\n                        <h3>iPad Pro 10.5 inch Wifi Cellular 64GB (2017)</h3>\n                        <strong>19.490.000₫</strong>\n                        <span>Màn hình: 10.5\", IPS LCD</span><span>CPU: Apple A10X 6 nhân 64-bit, iOS 12</span><span>RAM: 4 GB, Bộ nhớ: 64 GB</span><span>Camera: 12 MP, Selfie 7 MP</span><span>Kết nối mạng WiFi, 3G, 4G LTE</span><span>PIN: 30.4 Wh, SIM: 1 SIM</span>\n                    </figure>",
-      "link": "https://thegioididong.com/may-tinh-bang/ipad-pro-105-inch-wifi-cellular-64gb-2017"
-    }
-  ]
-}
+[<li>
+    <a href="/tai-nghe/tai-nghe-earpods-apple-md827-trang">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/158075/tai-nghe-earpods-apple-md827-trang-avatar-600x600.jpg" width="80"/>
+        
+        <strong>790.000₫</strong>
+                                <h3>Tai nghe nhét trong EarPods Apple MD827</h3>
+
+                        <p> Hết hàng tạm thời</p>
+
+    </a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-earpods-cong-lightning-apple-mmtn2">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/88053/tai-nghe-earpods-cong-lightning-apple-mmtn2-1-1-600x600.jpg" width="80"/>
+        
+        <strong>790.000₫</strong>
+                                <h3>Tai nghe nhét trong cổng Lightning EarPods Apple MMTN2</h3>
+
+        
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=88053">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-nhet-trong-samsung-eg920b">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/113118/tai-nghe-nhet-trong-samsung-eg920b-2-1-600x600.jpg" width="80"/>
+        
+        <strong>280.000₫</strong>
+                                <h3>Tai nghe nhét trong Samsung EG920B</h3>
+
+        
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=113118">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-kanen-ip-218">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/72775/tai-nghe-ep-kanen-ip-218-ava-600x600.jpg" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe nhét trong Kanen IP-218</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=72775">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-earpods-apple-md827fea">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/76061/tai-nghe-earpods-apple-md827fea-1-600x600.jpg" width="80"/>
+        
+        <strong>790.000₫</strong>
+                                <h3>Tai nghe nhét trong Earpods Apple MNHF2</h3>
+
+        
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=76061">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-kanen-s50-den">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/82701/tai-nghe-ep-kanen-s50-den-1-600x600.jpg" width="80"/>
+        
+        <strong>160.000₫</strong>
+            <span>200.000₫</span>
+                    <label class="discountpercent">Giảm 20 %</label>
+                        <h3>Tai nghe nhét trong Kanen S50</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> Giảm giá 20% (không áp dụng với CTKM khác) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=82701">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-sony-mdr-e9lp-bc-e-hong">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/75474/tai-nghe-ep-sony-mdr-e9lp-bc-e-hong-2-4-600x600.jpg" width="80"/>
+        
+        <strong>200.000₫</strong>
+                                <h3>Tai nghe nhét trong Sony MDR-E9LP (Không Thoại)</h3>
+
+        
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=75474">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-nhet-trong-samsung-ig935b">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/113116/tai-nghe-nhet-trong-samsung-ig935b-2-1-600x600.jpg" width="80"/>
+        
+        <strong>300.000₫</strong>
+                                <h3>Tai nghe nhét trong Samsung IG935B</h3>
+
+        
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=113116">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-kanen-ip-225">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/202694/tai-nghe-ep-kanen-ip-225-xanh-1-600x600.jpg" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Kanen IP-225</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=202694">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-mozard-ds510-wb-xanh">
+            <img height="80" src="https://cdn.tgdd.vn/Products/Images/54/201517/tai-nghe-ep-mozard-ds510-wb-xanh-1-600x600.jpg" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Mozard DS510-WB Xanh</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=201517">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-maxell">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/72776/tai-nghe-ep-maxell-2-2-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>120.000₫</strong>
+            <span>200.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe nhét trong Maxell EP MXH-IE100CV</h3>
+
+                        <p> Giao hàng từ 2-7 ngày</p>
+                    <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> Sản phẩm giá sốc (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=72776">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-kanen-s70-den-xanh-la">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/86501/tai-nghe-ep-kanen-s70-den-xanh-la-ava-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>160.000₫</strong>
+            <span>200.000₫</span>
+                    <label class="discountpercent">Giảm 20 %</label>
+                        <h3>Tai nghe nhét trong Kanen S70</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> Giảm giá 20% (không áp dụng với CTKM khác) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=86501">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-es500ni">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/69513/tai-nghe-ep-awei-es500ni-2-4-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>160.000₫</strong>
+            <span>200.000₫</span>
+                    <label class="discountpercent">Giảm 20 %</label>
+                        <h3>Tai nghe nhét trong Awei ES500Ni</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> Giảm giá 20% (không áp dụng với CTKM khác) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=69513">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-day-ep-the-thao-kanen-s40">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/74183/tai-nghe-day-ep-the-thao-kanen-s40-ava-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>160.000₫</strong>
+            <span>200.000₫</span>
+                    <label class="discountpercent">Giảm 20 %</label>
+                        <h3>Tai nghe nhét trong Kanen S40</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> Giảm giá 20% (không áp dụng với CTKM khác) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=74183">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-kanen-ip-219-aqua-xam">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/89064/tai-nghe-ep-kanen-ip-219-aqua-xam-ava-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe nhét trong Kanen IP-219 Aqua</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=89064">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-q7ni">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/69514/tai-nghe-ep-awei-q7ni-1-2-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe nhét trong Awei Q7Ni</h3>
+
+                            <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=69514">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-q50hi-bac">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/202538/tai-nghe-ep-awei-q50hi-bac-1-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Awei Q50Hi Bạc</h3>
+
+                        <p> Hết hàng tạm thời</p>
+                    <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=202538">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-q29hi-den-hong">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/202536/tai-nghe-ep-awei-q29hi-den-hong-1-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Awei Q29Hi Đen Hồng</h3>
+
+                        <p> Hết hàng tạm thời</p>
+                    <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=202536">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-q27hi-den">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/202534/tai-nghe-ep-awei-q27hi-den-1-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Awei Q27Hi Đen</h3>
+
+                        <p> Hết hàng tạm thời</p>
+                    <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=202534">Mua ngay</a>
+</li>, <li>
+    <a href="/tai-nghe/tai-nghe-ep-awei-q26hi-den">
+            <img class="lazy" data-original="https://cdn.tgdd.vn/Products/Images/54/202525/tai-nghe-ep-awei-q26hi-den-1-600x600.jpg" height="80" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" width="80"/>
+        
+        <strong>90.000₫</strong>
+            <span>150.000₫</span>
+                    <label class="discountpercent">Giảm 40 %</label>
+                        <h3>Tai nghe EP Awei Q26Hi Đen</h3>
+
+                        <p> Hết hàng tạm thời</p>
+                    <div class="promotion">
+                        <span>Khuyến mãi:</span><br/>
+                            <span> CT Hotsale cuối tuần (1 - 2/6) (đã trừ vào giá)</span><br/>
+                    </div>
+
+    </a>
+                <a class="botbtn" href="/them-vao-gio-hang?ProductId=202525">Mua ngay</a>
+</li>]
+{'site': 'thegioididong', 'products': [{'name': 'Tai nghe nhét trong EarPods Apple MD827', 'image': 'https://cdn.tgdd.vn/Products/Images/54/158075/tai-nghe-earpods-apple-md827-trang-avatar-600x600.jpg', 'price': '790000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-earpods-apple-md827-trang'}, {'name': 'Tai nghe nhét trong cổng Lightning EarPods Apple MMTN2', 'image': 'https://cdn.tgdd.vn/Products/Images/54/88053/tai-nghe-earpods-cong-lightning-apple-mmtn2-1-1-600x600.jpg', 'price': '790000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-earpods-cong-lightning-apple-mmtn2'}, {'name': 'Tai nghe nhét trong Samsung EG920B', 'image': 'https://cdn.tgdd.vn/Products/Images/54/113118/tai-nghe-nhet-trong-samsung-eg920b-2-1-600x600.jpg', 'price': '280000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-nhet-trong-samsung-eg920b'}, {'name': 'Tai nghe nhét trong Kanen IP-218', 'image': 'https://cdn.tgdd.vn/Products/Images/54/72775/tai-nghe-ep-kanen-ip-218-ava-600x600.jpg', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-kanen-ip-218'}, {'name': 'Tai nghe nhét trong Earpods Apple MNHF2', 'image': 'https://cdn.tgdd.vn/Products/Images/54/76061/tai-nghe-earpods-apple-md827fea-1-600x600.jpg', 'price': '790000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-earpods-apple-md827fea'}, {'name': 'Tai nghe nhét trong Kanen S50', 'image': 'https://cdn.tgdd.vn/Products/Images/54/82701/tai-nghe-ep-kanen-s50-den-1-600x600.jpg', 'price': '160000', 'delprice': '200000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-kanen-s50-den'}, {'name': 'Tai nghe nhét trong Sony MDR-E9LP (Không Thoại)', 'image': 'https://cdn.tgdd.vn/Products/Images/54/75474/tai-nghe-ep-sony-mdr-e9lp-bc-e-hong-2-4-600x600.jpg', 'price': '200000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-sony-mdr-e9lp-bc-e-hong'}, {'name': 'Tai nghe nhét trong Samsung IG935B', 'image': 'https://cdn.tgdd.vn/Products/Images/54/113116/tai-nghe-nhet-trong-samsung-ig935b-2-1-600x600.jpg', 'price': '300000', 'delprice': '', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-nhet-trong-samsung-ig935b'}, {'name': 'Tai nghe EP Kanen IP-225', 'image': 'https://cdn.tgdd.vn/Products/Images/54/202694/tai-nghe-ep-kanen-ip-225-xanh-1-600x600.jpg', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-kanen-ip-225'}, {'name': 'Tai nghe EP Mozard DS510-WB Xanh', 'image': 'https://cdn.tgdd.vn/Products/Images/54/201517/tai-nghe-ep-mozard-ds510-wb-xanh-1-600x600.jpg', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-mozard-ds510-wb-xanh'}, {'name': 'Tai nghe nhét trong Maxell EP MXH-IE100CV', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '120000', 'delprice': '200000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-maxell'}, {'name': 'Tai nghe nhét trong Kanen S70', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '160000', 'delprice': '200000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-kanen-s70-den-xanh-la'}, {'name': 'Tai nghe nhét trong Awei ES500Ni', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '160000', 'delprice': '200000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-es500ni'}, {'name': 'Tai nghe nhét trong Kanen S40', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '160000', 'delprice': '200000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-day-ep-the-thao-kanen-s40'}, {'name': 'Tai nghe nhét trong Kanen IP-219 Aqua', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-kanen-ip-219-aqua-xam'}, {'name': 'Tai nghe nhét trong Awei Q7Ni', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-q7ni'}, {'name': 'Tai nghe EP Awei Q50Hi Bạc', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-q50hi-bac'}, {'name': 'Tai nghe EP Awei Q29Hi Đen Hồng', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-q29hi-den-hong'}, {'name': 'Tai nghe EP Awei Q27Hi Đen', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-q27hi-den'}, {'name': 'Tai nghe EP Awei Q26Hi Đen', 'image': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==', 'price': '90000', 'delprice': '150000', 'decription': '', 'link': 'https://thegioididong.com/tai-nghe/tai-nghe-ep-awei-q26hi-den'}]}

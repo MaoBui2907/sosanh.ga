@@ -1,7 +1,7 @@
-from crawler import search_thegioididong, get_product_theogioididong, get_product_vienthonga, get_product_fptshop
+from crawler import search_thegioididong, search_fptshop, get_product_theogioididong, get_product_vienthonga, get_product_fptshop
 
 
-search_thegioididong("tai nghe bluetooth")
+print(search_thegioididong("tai nghe nhét tai"))
 # oput2 = search_fptshop("iphone")
 # oput3 = search_vienthonga("iphone")
 # data = merge_data([oput, oput2, oput3])
