@@ -257,14 +257,13 @@ def search_thegioididong(keyword):
                     pass
 
             products = [{'name': i.find('h3').text, 'image': i.find('img')['src'],
-                        'price': get_only_digit(i.find('strong').find(text=True)),
-                        'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
+                        'price': "{:,}".format(int(get_only_digit(i.find('strong').find(text=True)))),
+                        'delprice': ("{:,}".format(int(get_only_digit(i.find('a').find('span').find(text=True)))) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
                         'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
                         'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
         elif (html_text.body.find('ul', 'cate') is not None):
             products_blocks = html_text.body.find(
                 'ul', 'cate').findAll('li')
-            print(products_blocks)
             while (html_text.body.find('section').find('a', 'viewmore') is not None):
                 page += 1
                 if page == 5:
@@ -285,7 +284,7 @@ def search_thegioididong(keyword):
                         'decription': "",
                         'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
         
-    except ValueError:
+    except MemoryError:
         pass
 
     ouput_data = {
@@ -312,8 +311,8 @@ def search_fptshop(keyword):
                 'div', attrs={'id',  'category-products'}).findAll('div', attrs={'class', 'fs-lpitem'})
 
             products = [{'name': i.find('h3', 'fs-icname').text, 'image': i.find('img')['src'],
-                        'price': get_only_digit(i.find('p', 'fs-icpri').find(text=True)) if i.find('p', 'fs-icpri') is not None else '',
-                        'delprice': (get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
+                        'price': "{:,}".format(int(get_only_digit(i.find('p', 'fs-icpri').find(text=True)))) if i.find('p', 'fs-icpri') is not None else '',
+                        'delprice': ("{:,}".format(int(get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)))) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
                         'decription': "",
                         'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks if i.find('p', 'fs-icpri') is not None and i.find('p', 'fs-icpri').find(text=True) is not None]
     except:
@@ -369,7 +368,7 @@ def search_vienthonga(keyword):
                 'div', 'shop-masonry').findAll('div', 'masonry-item')
 
             products = [{'name': i.find('h3', 'name').text, 'image': i.find('img')['data-original'],
-                        'price': get_only_digit(i.find('div', 'price-1').find(text=True)) if i.find('div', 'price-1') is not None else '',
+                        'price': "{:,}".format(int(get_only_digit(i.find('div', 'price-1').find(text=True)))) if i.find('div', 'price-1') is not None else '',
                         'delprice': '',
                         'decription': i.find('div', attrs={'itemprop', 'description'}) if i.find('div', attrs={'itemprop', 'description'}) is not None else "",
                         'link': 'https://vienthonga.vn'+i.find('div', 'product-image').find('a')['href']} for i in products_blocks if i.find('div', 'price-1') is not None and i.find('div', 'price-1').find(text=True) is not None]
