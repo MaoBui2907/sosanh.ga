@@ -8,7 +8,6 @@ from flask import redirect
 from crawler import search_fptshop, search_thegioididong, search_vienthonga, merge_data, get_product
 app = Flask(__name__)
 
-
 # Cài đặt với đường dẫn /
 @app.route("/")
 def homepage():

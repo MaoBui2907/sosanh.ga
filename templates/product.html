@@ -17,7 +17,7 @@
     <!--Grid column-->
     <div class="col-md-6 mb-4">
       <div class="description">
-        {{ shops[0]["Mô tả ngắn"] | safe }}
+        {{ ((shops | rejectattr("Mô tả ngắn", 'equalto', "")) | first)["Mô tả ngắn"] | safe }}
       </div>
       <div class="text-best">Giá tốt nhất tại: 
         {% if best_price == "thegioididong"  %}
@@ -105,6 +105,5 @@
 {% endblock %} {% block script %}
 {{ super() }}
 <script>
-  // console.log("{{shops}}");
 </script>
 {% endblock %}

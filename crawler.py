@@ -63,7 +63,6 @@ def get_product_theogioididong(link):
             float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'ul', 'parameter')
-        print(product_short_description)
         if product_short_description.find('div', "ibsim"):
             product_short_description.find("div", "ibsim").extract() 
         for tag in product_short_description.findAll('div'):
@@ -237,7 +236,6 @@ def search_thegioididong(keyword):
     html_text = BeautifulSoup(plain_text)
     products = []
     page = 1
-    # print(html_text)
     try:
         if (html_text.body.find('ul', 'listsearch') is not None):
             products_blocks = html_text.body.find(
@@ -284,7 +282,7 @@ def search_thegioididong(keyword):
                         'decription': "",
                         'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
         
-    except MemoryError:
+    except:
         pass
 
     ouput_data = {
