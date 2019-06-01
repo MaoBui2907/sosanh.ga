@@ -234,7 +234,7 @@ def search_thegioididong(keyword):
     html_text = BeautifulSoup(plain_text)
     products = []
     page = 1
-    print(html_text)
+
     try:
         if (html_text.body.find('ul', 'listsearch') is not None):
             products_blocks = html_text.body.find(
@@ -255,14 +255,15 @@ def search_thegioididong(keyword):
                         'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
                         'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
                         'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
-        ouput_data = {
+       
+    except:
+        pass
+
+    ouput_data = {
             "site": "thegioididong",
             "products": products
         }
-        return ouput_data
-    except ValueError:
-        return {}
-
+    return ouput_data
 
 def search_fptshop(keyword):
     """Search with fptshop"""
@@ -276,16 +277,18 @@ def search_fptshop(keyword):
     html_text = BeautifulSoup(plain_text)
 
     products = []
+    try:
+        if (html_text.body.find('div', 'category-products') is not None):
+            products_blocks = html_text.body.find(
+                'div', attrs={'id',  'category-products'}).findAll('div', attrs={'class', 'fs-lpitem'})
 
-    if (html_text.body.find('div', 'category-products') is not None):
-        products_blocks = html_text.body.find(
-            'div', attrs={'id',  'category-products'}).findAll('div', attrs={'class', 'fs-lpitem'})
-
-        products = [{'name': i.find('h3', 'fs-icname').text, 'image': i.find('img')['src'],
-                     'price': get_only_digit(i.find('p', 'fs-icpri').find(text=True)) if i.find('p', 'fs-icpri') is not None else '',
-                     'delprice': (get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
-                     'decription': "",
-                     'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks]
+            products = [{'name': i.find('h3', 'fs-icname').text, 'image': i.find('img')['src'],
+                        'price': get_only_digit(i.find('p', 'fs-icpri').find(text=True)) if i.find('p', 'fs-icpri') is not None else '',
+                        'delprice': (get_only_digit(i.find('p', 'fs-icpri').find('del').find(text=True)) if i.find('p', 'fs-icpri').find('del') is not None else '') if i.find('p', 'fs-icpri') is not None else '',
+                        'decription': "",
+                        'link': 'https://fptshop.com.vn' + i.find('a')['href']} for i in products_blocks]
+    except:
+        pass
     ouput_data = {
         "site": "fptshop",
         "products": products
@@ -331,16 +334,19 @@ def search_vienthonga(keyword):
     html_text = BeautifulSoup(plain_text)
     products = []
 
-    if (html_text.body.find('div', 'shop-masonry') is not None):
-        products_blocks = html_text.body.find(
-            'div', 'shop-masonry').findAll('div', 'masonry-item')
+    try:
+        if (html_text.body.find('div', 'shop-masonry') is not None):
+            products_blocks = html_text.body.find(
+                'div', 'shop-masonry').findAll('div', 'masonry-item')
 
-        products = [{'name': i.find('h3', 'name').text, 'image': i.find('img')['data-original'],
-                     'price': get_only_digit(i.find('div', 'price-1').find(text=True)) if i.find('div', 'price-1') is not None else '',
-                     'delprice': '',
-                     'decription': i.find('div', attrs={'itemprop', 'description'}) if i.find('div', attrs={'itemprop', 'description'}) is not None else "",
-                     'link': 'https://vienthonga.vn'+i.find('div', 'product-image').find('a')['href']} for i in products_blocks]
+            products = [{'name': i.find('h3', 'name').text, 'image': i.find('img')['data-original'],
+                        'price': get_only_digit(i.find('div', 'price-1').find(text=True)) if i.find('div', 'price-1') is not None else '',
+                        'delprice': '',
+                        'decription': i.find('div', attrs={'itemprop', 'description'}) if i.find('div', attrs={'itemprop', 'description'}) is not None else "",
+                        'link': 'https://vienthonga.vn'+i.find('div', 'product-image').find('a')['href']} for i in products_blocks]
 
+    except:
+        pass
     ouput_data = {
         "site": "vienthonga",
         "products": products
