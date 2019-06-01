@@ -234,31 +234,34 @@ def search_thegioididong(keyword):
     html_text = BeautifulSoup(plain_text)
     products = []
     page = 1
+    print(html_text)
+    try:
+        if (html_text.body.find('ul', 'listsearch') is not None):
+            products_blocks = html_text.body.find(
+                'ul', 'listsearch').findAll('li')
+            while (html_text.body.find('aside', 'left_search').find('a', 'viewmore') is not None):
+                page += 1
+                if page == 5:
+                    break
+                viewmore = req.post('https://www.thegioididong.com/aj/SearchV2/LoadMoreProductResult',
+                                    data={'keyword': keyword, 'pageIndex': page, 'orderby': 0})
+                more = BeautifulSoup(viewmore.text)
+                if more.find('ul', 'listsearch') is not None:
+                    more_product = more.find('ul', 'listsearch').findAll('li') 
+                    products_blocks.extend(more_product)
 
-    if (html_text.body.find('ul', 'listsearch') is not None):
-        products_blocks = html_text.body.find(
-            'ul', 'listsearch').findAll('li')
-        while (html_text.body.find('aside', 'left_search').find('a', 'viewmore') is not None):
-            page += 1
-            if page == 5:
-                break
-            viewmore = req.post('https://www.thegioididong.com/aj/SearchV2/LoadMoreProductResult',
-                                data={'keyword': keyword, 'pageIndex': page, 'orderby': 0})
-            more = BeautifulSoup(viewmore.text)
-            more_product = more.find('ul', 'listsearch').findAll('li')
-            products_blocks.extend(more_product)
-
-        products = [{'name': i.find('h3').text, 'image': i.find('img')['src'],
-                     'price': get_only_digit(i.find('strong').find(text=True)),
-                     'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
-                     'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
-                     'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
-    ouput_data = {
-        "site": "thegioididong",
-        "products": products
-    }
-
-    return ouput_data
+            products = [{'name': i.find('h3').text, 'image': i.find('img')['src'],
+                        'price': get_only_digit(i.find('strong').find(text=True)),
+                        'delprice': (get_only_digit(i.find('a').find('span').find(text=True)) if i.find('a').find('span') is not None else '') if i.find('a') is not None else '',
+                        'decription': str(i.find('figure', 'bginfo')) if i.find('figure', 'bginfo') is not None else '',
+                        'link': 'https://thegioididong.com' + i.find('a')['href']} for i in products_blocks if i.find('strong') is not None and i.find('strong').find(text=True) is not None]
+        ouput_data = {
+            "site": "thegioididong",
+            "products": products
+        }
+        return ouput_data
+    except ValueError:
+        return {}
 
 
 def search_fptshop(keyword):
