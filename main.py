@@ -42,15 +42,13 @@ def search():
 def product():
     if request.method == 'POST':
         data = (eval(request.data))
-        print("data", data)
         name = data['name']
         image = data['image']
         compare = data['compare']
         shops = []
         for i in compare:
             shops.append(get_product(i['site'], i['link']))
-        print(shops)
-        return render_template('product.html', title=name + ' | So sánh', image=image, name=name, compare=compare, shops=shops)
+        return render_template('product.html', title=name + ' | So sánh',best_price=compare[0]['site'], image=image, name=name, compare=compare, shops=shops)
 
 if __name__ == "__main__":
     # Only for debugging while developing

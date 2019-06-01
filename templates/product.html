@@ -1,9 +1,10 @@
 {% extends 'base.html' %} {% block head%}
 
 {{ super() }}
-{% include "styledssp.html" %} {% endblock %} {% block content %} {% include
-"header.html" %}
-<div class="container" style="margin-top:150px">
+{% include "styledssp.html" %}
+<style></style>
+{% endblock %} {% block content %} {% include "header.html" %}
+<div class="container" style="margin-top:130px">
   <p class="name-product">{{ name }}</p>
 
   <div class="row">
@@ -15,10 +16,18 @@
 
     <!--Grid column-->
     <div class="col-md-6 mb-4">
-      <div>
-        {{ shops[0]["Mô tả ngắn"] }}
+      <div class="description">
+        {{ shops[0]["Mô tả ngắn"] | safe }}
       </div>
-      <div class="text-best">Giá tốt nhất tại: FPT</div>
+      <div class="text-best">Giá tốt nhất tại: 
+        {% if best_price == "thegioididong"  %}
+        Thế giới di động
+        {% elif best_price == "fptshop" %}
+        FPT Shop
+        {% else %}
+        Viễn thông a
+        {% endif %}
+      </div>
       <br /><br />
       <a
         class="btn btn-goshop-best"
@@ -62,8 +71,8 @@
         <h4 class="list-group-item-heading"></h4>
         <!-- <p class="list-group-item-text">
 						</p> -->
-		{% set ind = loop.index0 %}
-        Đánh giá: {% for n in range(1, 6) %} {% if n <= shops[ind]['Đánh giá'] %}
+        {% set ind = loop.index0 %} Đánh giá: {% for n in range(1, 6) %} {% if n
+        <= shops[ind]['Đánh giá'] %}
         <span class="fa fa-star checked"></span>
         {% else %}
         <span class="fa fa-star"></span>
@@ -96,6 +105,6 @@
 {% endblock %} {% block script %}
 {{ super() }}
 <script>
-    console.log("{{shops}}");
+  // console.log("{{shops}}");
 </script>
 {% endblock %}

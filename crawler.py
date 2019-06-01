@@ -62,6 +62,11 @@ def get_product_theogioididong(link):
             float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
             'ul', 'parameter')
+        product_short_description.find("div", "ibsim").extract()
+        for tag in product_short_description.findAll('div'):
+            tag.unwrap() 
+        for a in product_short_description.findAll('a'):
+            a.unwrap()
         product_rate = round(float(html_text.body.find('div', 'lcrt').get('data-gpa')))
         output = {
             "Tên sản phẩm": product_name,
@@ -72,9 +77,15 @@ def get_product_theogioididong(link):
             "Đánh giá": product_rate
         }
         return(output)
-    except req.exceptions.SSLError as e:
-        return e
-
+    except:
+        return {
+            "Tên sản phẩm": "",
+            "Giá gốc": 0,
+            "Giá bán": 0,
+            "Giảm giá": 0,
+            "Mô tả ngắn": "",
+            "Đánh giá": 0
+        }
 
 def get_product_fptshop(link):
     """Lấy thông tin từ trang fpt shop"""
@@ -98,7 +109,7 @@ def get_product_fptshop(link):
         product_discount = 100 - \
             float(product_real_price) * 100 / float(product_first_price)
         product_short_description = html_text.body.find(
-            'div', 'fs-tsright')
+            'div', 'fs-tsright').find('ul')
         product_rate = get_only_digit(html_text.body.find('div', 'fs-dtrt-c1').find('h5').text)[:-1]
         if(len(product_rate) == 2):
             product_rate = float(product_rate) / 10
@@ -112,8 +123,15 @@ def get_product_fptshop(link):
             "Đánh giá": product_rate
         }
         return(output)
-    except req.exceptions.SSLError as e:
-        return e
+    except:
+        return {
+            "Tên sản phẩm": "",
+            "Giá gốc": 0,
+            "Giá bán": 0,
+            "Giảm giá": 0,
+            "Mô tả ngắn": "",
+            "Đánh giá": 0
+        }
 
 
 def get_product_vienthonga(link):
@@ -146,8 +164,15 @@ def get_product_vienthonga(link):
             "Đánh giá": product_rate
         }
         return(output)
-    except req.exceptions.SSLError as e:
-        return e
+    except:
+        return {
+            "Tên sản phẩm": "",
+            "Giá gốc": 0,
+            "Giá bán": 0,
+            "Giảm giá": 0,
+            "Mô tả ngắn": "",
+            "Đánh giá": 0
+        }
 
 
 def get_product_info(link):

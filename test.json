@@ -1,1 +1,41 @@
-None
+{
+  "Tên sản phẩm": "Điện thoại Vsmart Active 1",
+  "Giá gốc": "3990000",
+  "Giá bán": "3390000",
+  "Giảm giá": 15.037593984962399,
+  "Mô tả ngắn": (
+    <ul class="parameter">
+      <li class="g6459_79_77">
+        <span>Màn hình:</span>IPS LCD, 5.65", Full HD+
+      </li>
+      <li class="g72">
+        <span>Hệ điều hành:</span>Android 8.1 (Oreo)
+      </li>
+      <li class="g27">
+        <span>Camera sau:</span>Chính 12 MP &amp; Phụ 5 MP
+      </li>
+      <li class="g29">
+        <span>Camera trước:</span>8 MP
+      </li>
+      <li class="g6059">
+        <span>CPU:</span>Qualcomm Snapdragon 660 8 nhân
+      </li>
+      <li class="g50">
+        <span>RAM:</span>4 GB
+      </li>
+      <li class="g49">
+        <span>Bộ nhớ trong:</span>64 GB
+      </li>
+      <li class="g52">
+        <span>Thẻ nhớ:</span>MicroSD, hỗ trợ tối đa 256 GB
+      </li>
+      <li class="g6339_6463">
+        <span>Thẻ SIM:</span>2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G
+      </li>
+      <li class="g84_10882">
+        <span>Dung lượng pin:</span>3100 mAh, có sạc nhanh
+      </li>
+    </ul>
+  ),
+  "Đánh giá": 4
+}
