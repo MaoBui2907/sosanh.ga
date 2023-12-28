@@ -1,7 +1,13 @@
-from crawler import search_thegioididong, search_fptshop, get_product_theogioididong, get_product_vienthonga, get_product_fptshop
 
+import json
+from crawler import Crawler
 
-print(search_thegioididong("tai nghe nhét tai"))
+crawler = Crawler()
+
+with open('test_01_2023.json', 'w+') as f:
+    json.dump(crawler.search_thegioididong('iphone'), f)
+
+# print(search_thegioididong("tai nghe nhét tai"))
 # oput2 = search_fptshop("iphone")
 # oput3 = search_vienthonga("iphone")
 # data = merge_data([oput, oput2, oput3])

@@ -1,0 +1,20 @@
+{
+    "thegioididong": {
+        "search": {
+            "search_url": "https://www.thegioididong.com/tim-kiem?key={}",
+            "product_block": "//div[contains(@class, 'filter-catesearch')]//ul[contains(@class, 'listsearch listproduct')]/li[contains(@class, 'item')]",
+            "viewmore_button": "//div[contains(@class, 'filter-catesearch')]//div[contains(@class, 'viewmore')]/a",
+            "viewmore_url": "https://www.thegioididong.com/Category/FilterProductBox?c=0&kw={}&pi={}",
+            "more_product_block": "/li[contains(@class, 'item')]"
+        }
+    },
+    "fptshop": {
+
+    },
+    "cellphones": {
+
+    },
+    "vienthonga": {
+
+    }
+}
